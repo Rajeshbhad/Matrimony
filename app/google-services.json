@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124740846952",
+    "project_id": "marathimatrimony-4af5f",
+    "storage_bucket": "marathimatrimony-4af5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124740846952:android:bd197aeccd116024e782dd",
+        "android_client_info": {
+          "package_name": "com.example.marathimatrimony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124740846952-vlepu7bosjvuvnjedpb2bin7r4gjamlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiDHeVP6a50n2cnlh8-5Ks1c1EH9aVANc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124740846952-vlepu7bosjvuvnjedpb2bin7r4gjamlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

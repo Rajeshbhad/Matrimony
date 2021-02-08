@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+    <group android:id="@+id/grp1">
+        <item
+            android:id="@+id/EditProfile"
+            android:icon="@drawable/ic_menu_edit_profile"
+            android:title="@string/editProfile" />
+        <item
+            android:id="@+id/EditPreferences"
+            android:icon="@drawable/ic_menu_edit_preferences"
+            android:title="@string/editPreferences" />
+    </group>
+    <group android:id="@+id/grp2">
+        <item
+            android:id="@+id/VerifyYourProfile"
+            android:icon="@drawable/ic_menu_profile_verification"
+            android:title="@string/profileVerification" />
+        <item
+            android:id="@+id/DailyRecommendation"
+            android:icon="@drawable/ic_menu_daily_recommendation"
+            android:title="@string/dailyRecommendation" />
+    </group>
+    <group android:id="@+id/grp3">
+        <item
+            android:id="@+id/YourChat"
+            android:icon="@drawable/ic_menu_your_chat"
+            android:title="@string/yourChat" />
+        <item
+            android:id="@+id/YourCall"
+            android:icon="@drawable/ic_menu_your_call"
+            android:title="@string/yourCall" />
+    </group>
+    <group android:id="@+id/grp4">
+        <item
+            android:id="@+id/Setting"
+            android:icon="@drawable/ic_menu_setting"
+            android:title="@string/setting" />
+        <item
+            android:id="@+id/Help"
+            android:icon="@drawable/ic_menu_help"
+            android:title="@string/Help" />
+        <item
+            android:id="@+id/WeddingServices"
+            android:icon="@drawable/ic_menu_wedding_services"
+            android:title="@string/weddingServices" />
+        <item
+            android:id="@+id/SuccessStories"
+            android:icon="@drawable/ic_menu_success_stories"
+            android:title="@string/successStories" />
+    </group>
+    <group android:id="@+id/grp5">
+        <item
+            android:id="@+id/Version"
+            android:title="Version 7.6.232" />
+    </group>
+    </group>
+</menu>

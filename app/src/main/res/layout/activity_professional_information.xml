@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfessionalInformation">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/ProfessionalInformation_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROFESSIONAL INFORMATION"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Highest Education"/>
+        <Spinner
+            android:id="@+id/editHighestEducation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="HighestEducation" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Enter College and Institution"/>
+        <EditText
+            android:id="@+id/editEnterCollegeInstitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter College and Institution"
+            android:textSize="17sp"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Employed In"/>
+        <Spinner
+            android:id="@+id/editEmployedIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Employed In" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Occupation"/>
+        <Spinner
+            android:id="@+id/editOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Occupation" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Enter Organization Name"/>
+        <EditText
+            android:id="@+id/editEnterOrganizationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Organizatio nName"
+            android:textSize="17sp"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="2dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Currency Type"/>
+        <Spinner
+            android:id="@+id/editCurrencyType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="CurrencyType" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Enter Annual Income"/>
+
+        <Spinner
+            android:id="@+id/editEnterAnnualIncome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="EnterAnnualIncome" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <Button
+            android:id="@+id/ReligiousInformationSaveBtn"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape6"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="SAVE" />
+    </LinearLayout>
+</ScrollView>

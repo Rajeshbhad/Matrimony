@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.marathimatrimony">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarathiMatrimony">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MarathiMatrimony.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MarathiMatrimony.NoActionBar" />
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MarathiMatrimony.NoActionBar" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".EditContact"
+            android:label="EDIT CONTACT INFO"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".EditEmail"
+            android:label="EDIT EMAIL"
+            android:parentActivityName=".EditContact" />
+        <activity
+            android:name=".EditPhoneNumber"
+            android:label="EDIT PHONE NUMBER"
+            android:parentActivityName=".EditContact" />
+        <activity
+            android:name=".EditAlternateNumber"
+            android:label="EDIT ALTERNATE NUMBER"
+            android:parentActivityName=".EditContact" />
+        <activity
+            android:name=".EditContactPreferences"
+            android:label="EDIT CONTACT PREFERENCES"
+            android:parentActivityName=".EditContact" />
+        <activity
+            android:name=".AddHoroscope"
+            android:label="ADD HOROSCOPE"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".AddPhotos"
+            android:label="PHOTO ALBUM"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".InMyOwnWords"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".BasicDetails"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".ReligiousInformation"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".ProfessionalInformation"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".Location"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".FamilyDetails"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".AboutMyFamily"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".HobbiesAndInterest"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".BasicPreferences"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".ReligiousPreferences"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".ProfessionalPreferences"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".LocationPreferences"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".WhatIAmLookingFor"
+            android:label="@string/edit_profile"
+            android:parentActivityName=".EditProfileActivity" />
+        <activity
+            android:name=".ProfileVerificationActivity"
+            android:label="Profile Verification"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".DailyRecommendation"
+            android:label="Daily Recommendation"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".YourChat"
+            android:label="Your Chat"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".ViewOnlineMembersActivity"
+            android:label="View Online Members"
+            android:parentActivityName=".YourCallActivity" />
+        <activity
+            android:name=".YourCallActivity"
+            android:label="Your Call"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="Setting"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="Help"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".WeddingServices"
+            android:label="Wedding Services"
+            android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+            android:name=".SuccessStoriesActivity"
+            android:label="Success Stories"
+            android:parentActivityName=".NavigationActivity" />
+    </application>
+
+</manifest>

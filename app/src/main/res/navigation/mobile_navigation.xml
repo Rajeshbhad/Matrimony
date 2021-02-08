@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.marathimatrimony.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.marathimatrimony.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/navigationActivity"
+        android:name="com.example.marathimatrimony.NavigationActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.marathimatrimony.bottomnavigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="com.example.marathimatrimony.bottomnavigation.MatchesFragment"
+        android:label="fragment_matches"
+        tools:layout="@layout/fragment_matches" />
+    <fragment
+        android:id="@+id/mailboxFragment"
+        android:name="com.example.marathimatrimony.bottomnavigation.MailboxFragment"
+        android:label="fragment_mailbox"
+        tools:layout="@layout/fragment_mailbox" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.marathimatrimony.bottomnavigation.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/searchesFragment"
+        android:name="com.example.marathimatrimony.bottomnavigation.SearchesFragment"
+        android:label="fragment_searches"
+        tools:layout="@layout/fragment_searches" />
+
+</navigation>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".AddHoroscope">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:text="Fill in below details to generate horoscope" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textSize="12sp"
+        android:textColor="#E60505"
+        android:text="Note:Date of Birth can be edited only Once" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/date_of_birth_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:textColor="#050505"
+                android:text="Date Of Birth" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/time_of_birth_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="Time Of Birth" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/country_of_birth_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="Country Of Birth" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/state_of_birth_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="State Of Birth" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/city_of_birth_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="City Of Birth" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/chart_style_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="Chart Style" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/language_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:textColor="#050505"
+            android:text="Language" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:text="Or upload a scanned copy of your Horoscope" />
+    <Button
+        android:id="@+id/AddHoroscopeSaveBtn"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape6"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:text="SAVE" />
+</LinearLayout>

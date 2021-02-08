@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReligiousPreferences">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/RELIGIOUSPREFERENCES_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RELIGIOUS PREFERENCES"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Religion"/>
+        <Spinner
+            android:id="@+id/editReligion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Religion" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="MotherTongue"/>
+        <Spinner
+            android:id="@+id/editMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="MotherTongue" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Caste"/>
+        <Spinner
+            android:id="@+id/editCaste"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Caste" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Sub Caste"/>
+        <Spinner
+            android:id="@+id/editSubCaste"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Sub Caste" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Star"/>
+        <Spinner
+            android:id="@+id/editStar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Star" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Dosh"/>
+        <Spinner
+            android:id="@+id/editDosh"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Dosh" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+    </LinearLayout>
+</ScrollView>

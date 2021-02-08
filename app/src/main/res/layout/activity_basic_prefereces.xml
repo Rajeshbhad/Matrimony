@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicPreferences">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/HobbiesAndInterest_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASIC PREFERENCES"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Age From"/>
+        <Spinner
+            android:id="@+id/editAgeFrom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Age From" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Age To"/>
+        <Spinner
+            android:id="@+id/editAgeTo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Age To" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Maritial Status"/>
+        <Spinner
+            android:id="@+id/editMaritialStatus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Maritial Status" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Have Children"/>
+        <Spinner
+            android:id="@+id/editHaveChildren"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Have Children" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Height From"/>
+        <Spinner
+            android:id="@+id/editHeightFrom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Height From" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Height To"/>
+        <Spinner
+            android:id="@+id/editHeightTo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Height From" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Physical Status"/>
+        <Spinner
+            android:id="@+id/editPhysicalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Physical Status" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Eating Habits"/>
+        <Spinner
+            android:id="@+id/editEatingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Eating Habits" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Drinking Habits"/>
+        <Spinner
+            android:id="@+id/editDrinkingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Drinking Habits" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Smoking Habits"/>
+        <Spinner
+            android:id="@+id/editSmokingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="Smoking Habits" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+    </LinearLayout>
+</ScrollView>

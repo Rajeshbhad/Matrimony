@@ -1,0 +1,325 @@
+<resources>
+    <string name="app_name">Marathi Matrimony</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+
+
+    <string name="button">Login</string>
+    <string name="login">Login</string>
+    <string name="edPassword">Password</string>
+    <string name="tvUsername">Username</string>
+    <string name="register">Register?</string>
+    <string name="editUsername">Username</string>
+    <string name="editEmail">Email</string>
+    <string name="editPassword">Password</string>
+    <string name="rePassword">RePassword</string>
+    <string name="btnRegister">Register</string>
+    <string name="Registration">Registration</string>
+    <string name="Login">Login</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="editProfile">Edit Profile</string>
+    <string name="editPreferences">Edit Preferences</string>
+    <string name="profileVerification">profile Verification</string>
+    <string name="dailyRecommendation">Daily Recommendation</string>
+    <string name="yourChat">Your Chat</string>
+    <string name="yourCall">Your Call</string>
+    <string name="setting">Setting</string>
+    <string name="Help">Help</string>
+    <string name="weddingServices">Wedding Services</string>
+    <string name="successStories">Success Stories</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_matches">Matches</string>
+    <string name="title_mailbox">Mailbox</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_searches">Searches</string>
+    <string name="hello_blank_fragment">hello</string>
+
+    <string name="profile_completeness">PROFILE COMPLETENESS</string>
+    <string name="edit_contacts">EDIT CONTACTS</string>
+    <string name="add_horoscope">ADD HOROSCOPE</string>
+    <string name="add_photos">ADD PHOTOS</string>
+
+    <string name="menu_edit_profile">Edit Profile</string>
+
+    <string name="card_basic_details">Basic Details</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="physical_status">Physical Status</string>
+    <string name="body_type">Body Type</string>
+    <string name="profile_created_by">Profile Created By</string>
+    <string name="eating_habits">Eating Habits</string>
+    <string name="drinking_habits">Drinking Habits</string>
+    <string name="smoking_habits">Smoking Habits</string>
+
+    <string name="card_religious_information">Religious Information</string>
+    <string name="religion">Religion</string>
+    <string name="caste">Caste</string>
+    <string name="gothra">Gothra</string>
+    <string name="zodic">Zodic</string>
+    <string name="star">Star</string>
+    <string name="raasi">Raasi</string>
+
+    <string name="card_professional_information">Professional Information</string>
+    <string name="college_institution">College Institution</string>
+    <string name="education_category">Education Category</string>
+    <string name="occupation">Occupation</string>
+    <string name="organization">Organization</string>
+    <string name="employed_in">Employed In</string>
+    <string name="annual_income">Annual Income</string>
+
+
+    <string name="card_location">location</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="citizenship">Citizenship</string>
+
+    <string name="card_family_details">Family Details</string>
+    <string name="family_values">Family Values</string>
+    <string name="family_type">Family Type</string>
+    <string name="family_status">Family Status</string>
+    <string name="fathers_occupation">Fathers Occupation</string>
+    <string name="mothers_occupation">Mothers Occupation</string>
+    <string name="brothers">Brother(s)</string>
+    <string name="brothers_married">Brother(s) Married</string>
+    <string name="sisters_married">Sister(s) Married</string>
+    <string name="sisters">Sister(s)</string>
+    <string name="ancestral_origin">Ancestral Origin</string>
+
+    <string name="card_about_my_family">About My Family</string>
+    <string name="about_my_family">about_my_family</string>
+
+    <string name="card_hobbies_and_interests">Hobbies and Interests</string>
+    <string name="hobbies_and_interests">ADD</string>
+
+    <string name="card_basic_preferences">Basic Preferences</string>
+    <string name="have_children">Have Children</string>
+
+    <string name="card_religious_preferences">Religious Preferences</string>
+    <string name="mother_tongue">Mother Tongue</string>
+    <string name="sub_caste">Sub Caste</string>
+    <string name="dosh">Dosh</string>
+
+    <string name="card_location_preferences">Location Preferences</string>
+    <string name="education">Education</string>
+    <string name="location_preferences">location preferences</string>
+    <string name="residing_state">Residing State</string>
+
+    <string name="card_professional_preferences">Professional Preferences</string>
+
+    <string name="card_in_my_own_words">In My Own Words</string>
+    <string name="in_my_own_words">ADD</string>
+
+    <string name="card_what_i_am_looking_for">What I Am Looking For</string>
+    <string name="what_i_am_looking_for">ADD</string>
+    <string name="your_views_on_an_equal_relationship">Your views on an equal relationship</string>
+    <string name="partner_preferences">PARTNER PREFERENCES</string>
+    <string name="personal_information">PERSONAL INFORMATION</string>
+    <string name="put_a_face_to_your_profile">Put a Face To Your Profile</string>
+    <string name="upload_photo">Upload Photo</string>
+
+    <string-array name="arrayProfileCreatedFor">
+        <item>--Select--</item>
+        <item>Myself</item>
+        <item>Son</item>
+        <item>Brother</item>
+        <item>Relative</item>
+        <item>Friend</item>
+    </string-array>
+    <string-array name="arrayHeight">
+        <item>4 Ft 6 In</item>
+        <item>4 Ft 7 In</item>
+        <item>4 Ft 8 In</item>
+        <item>4 Ft 9 In</item>
+        <item>4 Ft 10 In</item>
+        <item>4 Ft 11 In</item>
+        <item>5 Ft</item>
+        <item>5 Ft 1 In</item>
+        <item>5 Ft 2 In</item>
+        <item>5 Ft 3 In</item>
+        <item>5 Ft 4 In</item>
+        <item>5 Ft 5 In</item>
+        <item>5 Ft 6 In</item>
+        <item>5 Ft 7 In</item>
+        <item>5 Ft 8 In</item>
+        <item>5 Ft 9 In</item>
+        <item>5 Ft 10 In</item>
+        <item>6 Ft 11 In</item>
+        <item>6 Ft 1 In</item>
+        <item>6 Ft 2 In</item>
+        <item>6 Ft 3 In</item>
+        <item>6 Ft 4 In</item>
+        <item>6 Ft 5 In</item>
+        <item>6 Ft 6 In</item>
+        <item>6 Ft 7 In</item>
+        <item>6 Ft 8 In</item>
+        <item>6 Ft 9 In</item>
+        <item>6 Ft 10 In</item>
+        <item>6 Ft 11 In</item>
+        <item>7 Ft</item>
+    </string-array>
+    <string-array name="arrayWeight">
+        <item>41 kgs</item>
+        <item>42 kgs</item>
+        <item>43 kgs</item>
+        <item>44 kgs</item>
+        <item>45 kgs</item>
+        <item>46 kgs</item>
+        <item>47 kgs</item>
+        <item>48 kgs</item>
+        <item>49 kgs</item>
+        <item>50 kgs</item>
+        <item>51 kgs</item>
+        <item>52 kgs</item>
+        <item>53 kgs</item>
+        <item>54 kgs</item>
+        <item>55 kgs</item>
+        <item>56 kgs</item>
+        <item>57 kgs</item>
+        <item>58 kgs</item>
+        <item>59 kgs</item>
+        <item>60 kgs</item>
+        <item>61 kgs</item>
+        <item>62 kgs</item>
+        <item>63 kgs</item>
+        <item>64 kgs</item>
+        <item>65 kgs</item>
+        <item>66 kgs</item>
+        <item>67 kgs</item>
+        <item>68 kgs</item>
+        <item>69 kgs</item>
+        <item>70 kgs</item>
+        <item>71 kgs</item>
+        <item>72 kgs</item>
+        <item>73 kgs</item>
+        <item>74 kgs</item>
+        <item>75 kgs</item>
+        <item>76 kgs</item>
+        <item>77 kgs</item>
+        <item>78 kgs</item>
+        <item>79 kgs</item>
+        <item>80 kgs</item>
+        <item>81 kgs</item>
+        <item>82 kgs</item>
+        <item>83 kgs</item>
+        <item>84 kgs</item>
+        <item>85 kgs</item>
+        <item>86 kgs</item>
+        <item>87 kgs</item>
+        <item>88 kgs</item>
+        <item>89 kgs</item>
+        <item>90 kgs</item>
+        <item>91 kgs</item>
+        <item>92 kgs</item>
+        <item>93 kgs</item>
+        <item>94 kgs</item>
+        <item>95 kgs</item>
+        <item>96 kgs</item>
+        <item>97 kgs</item>
+        <item>98 kgs</item>
+        <item>99 kgs</item>
+        <item>99 kgs</item>
+    </string-array>
+    <string-array name="arrayMaritalStatus">
+        <item>Never Married</item>
+        <item>Widower</item>
+        <item>Divorced</item>
+        <item>Awaiting Divorce</item>
+    </string-array>
+    <string-array name="arrayBodyType">
+        <item>Average</item>
+        <item>Athletic</item>
+        <item>Slim</item>
+        <item>Heavy</item>
+    </string-array>
+    <string-array name="arrayMotherTongue">
+        <item>Hindi</item>
+        <item>Bengali</item>
+        <item>Marathi</item>
+        <item>Telugu</item>
+        <item>Tamil</item>
+        <item>Gujarati</item>
+        <item>Urdu</item>
+        <item>Bhojpuri</item>
+        <item>Kannada</item>
+        <item>Malayalam</item>
+        <item>Odia</item>
+        <item>Punjabi</item>
+        <item>Rajasthani</item>
+        <item>Chhattisgarhi</item>
+        <item>Assamese</item>
+        <item>Maithili</item>
+        <item>Magadhi/Magahi</item>
+        <item>Haryanvi</item>
+        <item>Khortha/Khotta</item>
+        <item>Marwari</item>
+        <item>Santali</item>
+        <item>Kashmiri</item>
+        <item>Bundeli/Bundel khandi</item>
+        <item>Malvi</item>
+        <item>Sadan/Sadri</item>
+        <item>Mewari</item>
+        <item>Awadhi</item>
+        <item>Wagdi</item>
+        <item>Lamani/Lambadi</item>
+        <item>Pahari[c]</item>
+        <item>Bhili/Bhilodi</item>
+        <item>Hara/Harauti</item>
+        <item>Nepali</item>
+        <item>Gondi</item>
+        <item>Bagheli/Baghel Khandi</item>
+        <item>Sambalpuri</item>
+        <item>Dogri</item>
+        <item>Garhwali</item>
+        <item>Nimadi</item>
+        <item>Surjapuri</item>
+        <item>Konkani</item>
+        <item>Kumauni</item>
+        <item>Kurukh/Oraon</item>
+        <item>Tulu</item>
+        <item>Manipuri</item>
+        <item>Surgujia</item>
+        <item>Sindhi</item>
+        <item>Bagri</item>
+        <item>Ahirani</item>
+        <item>Banjari</item>
+        <item>Brajbhasha</item>
+        <item>Dhundhari</item>
+        <item>Bodo/Boro</item>
+        <item>Gojri/Gujjari/Gujar</item>
+        <item>Mundari</item>
+        <item>Garo</item>
+        <item>Kangri</item>
+        <item>Khasi</item>
+        <item>Kachchhi</item>
+    </string-array>
+    <string-array name="arrayEatingHabits">
+        <item>Vegetarian</item>
+        <item>Non-Vegetarian</item>
+        <item>Eggetarian</item>
+    </string-array>
+    <string-array name="arrayDrinkingHabits">
+        <item>No</item>
+        <item>Occasionally</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="arraySmokingHabits">
+        <item>No</item>
+        <item>Occasionally</item>
+        <item>Yes</item>
+    </string-array>
+
+
+
+
+</resources>

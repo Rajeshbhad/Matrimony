@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicDetails">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/Basic_Details_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASIC DETAILS"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="ProfileCreatedFor"/>
+        <Spinner
+            android:id="@+id/editProfileCreatedFor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayProfileCreatedFor"
+            android:text="select city" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Name"/>
+        <EditText
+            android:id="@+id/EditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Name"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="1dp"
+            android:height="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Age/Date Of Birth"/>
+        <EditText
+            android:id="@+id/age_and_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:inputType="date"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="1dp"
+            android:height="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Height"/>
+
+        <Spinner
+            android:id="@+id/editHeight"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayHeight"
+            android:text="select city" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Height"/>
+
+        <Spinner
+            android:id="@+id/editWeight"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayWeight"
+            android:text="select city" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Marital Status"/>
+
+        <Spinner
+            android:id="@+id/editMaritalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayMaritalStatus"
+            android:text="select city" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Body Type"/>
+        <Spinner
+            android:id="@+id/editBodyType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayBodyType"
+            android:text="Body Type" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Mother Tongue"/>
+        <Spinner
+            android:id="@+id/editMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayMotherTongue"
+            android:text="Body Type" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Know to Read"
+            android:textSize="17sp"
+            android:layout_margin="7dp"
+            android:checked="false"
+            android:gravity="left"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Eating Habits"/>
+        <Spinner
+            android:id="@+id/editEatingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayEatingHabits"
+            android:text="Body Type" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Drinking Habits"/>
+        <Spinner
+            android:id="@+id/editDrinkingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arrayDrinkingHabits"
+            android:text="Body Type" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Smoking Habits"/>
+        <Spinner
+            android:id="@+id/editSmokingHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/arraySmokingHabits"
+            android:text="Body Type" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BAB7B7" />
+        <Button
+            android:id="@+id/basicDetailsSaveBtn"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape6"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="SAVE" />
+    </LinearLayout>
+</ScrollView>

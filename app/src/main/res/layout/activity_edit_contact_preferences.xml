@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_marginTop="10dp"
+    tools:context=".EditContactPreferences">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/edit_mail_card_view"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/contact_preferences_card_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="CONTACT PREFERENCES" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/whom_to_contact_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#434040"
+            android:text="Whom to Contact"/>
+        <EditText
+            android:id="@+id/whom_to_contact_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Not Specified"/>
+        <TextView
+            android:id="@+id/contact_person_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#434040"
+            android:text="Contact Person Name"/>
+        <EditText
+            android:id="@+id/contact_person_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Not Specified"/>
+        <TextView
+            android:id="@+id/available_time_to_call_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#434040"
+            android:text="Available Time to Call"/>
+        <EditText
+            android:id="@+id/available_time_to_call_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Not Specified"/>
+        <TextView
+            android:id="@+id/comments_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#434040"
+            android:text="Available Time to Call"/>
+        <EditText
+            android:id="@+id/comments_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Not Specified"/>
+    </LinearLayout>
+
+</ScrollView>

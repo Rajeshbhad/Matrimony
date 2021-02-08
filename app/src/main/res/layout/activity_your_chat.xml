@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourChat">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No conversation till now."
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Initiate a new conversation with matches who are online"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/viewOnlineMember"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape6"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="View Online Members" />
+    </LinearLayout>
+</ScrollView>
