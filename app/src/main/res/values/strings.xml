@@ -8,13 +8,13 @@
     <string name="edPassword">Password</string>
     <string name="tvUsername">Username</string>
     <string name="register">Register?</string>
-    <string name="editUsername">Username</string>
-    <string name="editEmail">Email</string>
-    <string name="editPassword">Password</string>
-    <string name="rePassword">RePassword</string>
+    <string name="editUsername">Enter your FullName</string>
+    <string name="editEmail">Enter Your Email</string>
+    <string name="editPassword">Enter Your Password</string>
+    <string name="rePassword">Enter Your RePassword</string>
     <string name="btnRegister">Register</string>
     <string name="Registration">Registration</string>
-    <string name="Login">Login</string>
+    <string name="btnLogin">Login</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -318,8 +318,6 @@
         <item>Occasionally</item>
         <item>Yes</item>
     </string-array>
-
-
 
 
 </resources>

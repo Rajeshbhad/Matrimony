@@ -14,12 +14,12 @@ import com.example.marathimatrimony.bottomnavigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
-open class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener
+class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener
 {
+
 
     private lateinit var toolbar: Toolbar
     private lateinit var navigationView: NavigationView
-
     private lateinit var drawerLayout: DrawerLayout
     lateinit var homeFragment: HomeFragment
     lateinit var matchesFragment: MatchesFragment
@@ -30,10 +30,8 @@ open class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationI
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation)
-
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
 
@@ -55,6 +53,7 @@ open class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationI
                         .replace(R.id.nav_host_fragment,homeFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
+
                 }
                 R.id.navigation_matches ->
                 {
@@ -106,7 +105,11 @@ open class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationI
         toggle.syncState()
         navigationView.setNavigationItemSelectedListener(this)
 
+
     }
+
+
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.navigation, menu)
         return true
@@ -155,6 +158,9 @@ open class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationI
             R.id.SuccessStories ->{
                 val intent = Intent(this, SuccessStoriesActivity::class.java)
                 startActivity(intent) }
+            R.id.Logout->{
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish() }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
