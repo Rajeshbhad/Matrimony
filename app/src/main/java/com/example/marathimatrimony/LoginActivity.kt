@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,8 +19,8 @@ class LoginActivity : AppCompatActivity() {
      lateinit var edPassword:EditText
      lateinit var btnLLogin:Button
      lateinit var btnLRegister: Button
-     lateinit var btnForgotPassword:Button
-
+     lateinit var btnForgotPassword:TextView
+     lateinit var btnLoginWithOtp:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,18 +33,26 @@ class LoginActivity : AppCompatActivity() {
         btnLLogin=findViewById(R.id.btnLLogin)
         btnLRegister=findViewById(R.id.btnLRegister)
         btnForgotPassword=findViewById(R.id.btnForgotPassword)
+        btnLoginWithOtp=findViewById(R.id.btnLoginWithOtp)
 
         btnLRegister.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
             finish()
         }
-        btnLLogin.setOnClickListener {
-            loginUser()
+        btnLoginWithOtp.setOnClickListener {
+            startActivity(Intent(this,LoginViaOtp::class.java))
+            finish()
         }
 
         btnForgotPassword.setOnClickListener {
             startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
+
+        btnLLogin.setOnClickListener {
+            loginUser()
+        }
+
+
 
     }
 

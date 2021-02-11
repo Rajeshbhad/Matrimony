@@ -14,11 +14,16 @@ class RegisterActivity : AppCompatActivity() {
 
    private lateinit var auth: FirebaseAuth
 
+//    var databaseReference :  DatabaseReference? = null
+//    var database: FirebaseDatabase? = null
 
-   lateinit var editEmail:EditText
-   lateinit var editPassword:EditText
-   lateinit var editCPassword:EditText
-   lateinit var btnRRegister:Button
+    lateinit var editUsername:EditText
+    lateinit var editEmail:EditText
+    lateinit var editAge:EditText
+    lateinit var editPhoneNo:EditText
+    lateinit var editPassword:EditText
+    lateinit var btnRRegister:Button
+    lateinit var btnRLogin:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,20 +31,30 @@ class RegisterActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        editEmail=findViewById(R.id.editEmail)
-        editPassword=findViewById(R.id.editPassword)
-        editCPassword=findViewById(R.id.editCPassword)
-        btnRRegister=findViewById(R.id.btnRRegister)
+//        database = FirebaseDatabase.getInstance()
+//        databaseReference = database?.reference!!.child("profile")
 
+        editUsername=findViewById(R.id.editUsername)
+        editEmail=findViewById(R.id.editEmail)
+        editAge=findViewById(R.id.editAge)
+        editPhoneNo=findViewById(R.id.editPhoneNo)
+        editPassword=findViewById(R.id.editPassword)
+        btnRRegister=findViewById(R.id.btnRRegister)
+        btnRLogin=findViewById(R.id.btnRLogin)
+
+        btnRLogin.setOnClickListener{
+            startActivity(Intent(this,LoginActivity::class.java))
+        }
         btnRRegister.setOnClickListener {
             registerUser()
-
         }
 
+
     }
+
     private fun registerUser() {
 
-        if (editEmail.text.toString().isEmpty())
+        if (editEmail.text.trim().toString().isEmpty())
         {
             editEmail.error="Please Enter Email"
             editEmail.requestFocus()
@@ -51,21 +66,15 @@ class RegisterActivity : AppCompatActivity() {
             editEmail.requestFocus()
             return
         }
-        if (editPassword.text.toString().isEmpty())
+        if (editPassword.text.trim().toString().isEmpty())
         {
             editPassword.error="Please Enter Password"
             editPassword.requestFocus()
             return
         }
-        if (editPassword.length()<8)
+        if (editPassword.length()<6||editPassword.length()>8)
         {
-            editPassword.error="Password required Minimum 6 Characters"
-            editPassword.requestFocus()
-            return
-        }
-        if (editPassword.length()>5)
-        {
-            editPassword.error="Password required Minimum 6 Characters"
+            editPassword.error="Password required Minimum 8 Characters"
             editPassword.requestFocus()
             return
         }
@@ -75,19 +84,34 @@ class RegisterActivity : AppCompatActivity() {
                 {
                     val user:FirebaseUser? = auth.currentUser
                         user?.sendEmailVerification()
-                            ?.addOnCompleteListener { task ->
+                            ?.addOnCompleteListener {
                                 if (task.isSuccessful)
                                 {
                                     Toast.makeText(this, "Registration Successfully", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this, "Please Check Your Email Verify Your Account!", Toast.LENGTH_SHORT).show()
+
+//                                    val currentUSerDb = databaseReference?.child((user.uid))
+//                                    currentUSerDb?.child("editUsername")?.setValue(editUsername.text.toString())
+//                                    currentUSerDb?.child("editEmail")?.setValue(editAge.text.toString())
+//                                    currentUSerDb?.child("editAge")?.setValue(editEmail.text.toString())
+//                                    currentUSerDb?.child("editPhoneNo")?.setValue(editPhoneNo.text.toString())
+
                                     startActivity(Intent(this,LoginActivity::class.java))
                                     finish()
                                 }
+                                else
+                                {
+                                    Toast.makeText(this, "Already Registered", Toast.LENGTH_SHORT).show()
+
+                                }
                             }
                 } else {
-                    Toast.makeText(this, "Registration Fail. Try Again", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Already Registered", Toast.LENGTH_SHORT).show()
                 }
 
             }
       }
+
+
 
 }

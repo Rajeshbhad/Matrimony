@@ -8,13 +8,17 @@
     <string name="edPassword">Password</string>
     <string name="tvUsername">Username</string>
     <string name="register">Register?</string>
-    <string name="editUsername">Enter your FullName</string>
+    <string name="editUsername">Enter your Full Name</string>
     <string name="editEmail">Enter Your Email</string>
+    <string name="editAge">Enter Your Age</string>
+    <string name="editPhoneNo">Enter Your Phone Number</string>
     <string name="editPassword">Enter Your Password</string>
     <string name="rePassword">Enter Your RePassword</string>
     <string name="btnRegister">Register</string>
     <string name="Registration">Registration</string>
     <string name="btnLogin">Login</string>
+    <string name="btnLoginWithOtp">Login Via OTP</string>
+
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
