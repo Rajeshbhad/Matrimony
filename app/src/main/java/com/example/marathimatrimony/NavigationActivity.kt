@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -14,18 +13,17 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.marathimatrimony.bottomnavigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener
 {
 
-//    lateinit var auth: FirebaseAuth
-//    var databaseReference :  DatabaseReference? = null
-//    var database: FirebaseDatabase? = null
+     lateinit var auth: FirebaseAuth
+
 
      lateinit var toolbar: Toolbar
      lateinit var navigationView: NavigationView
      lateinit var drawerLayout: DrawerLayout
-     var fullName: TextView? =null
     lateinit var homeFragment: HomeFragment
     lateinit var matchesFragment: MatchesFragment
     lateinit var mailboxFragment: MailboxFragment
@@ -39,13 +37,6 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
         setSupportActionBar(toolbar)
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
-        fullName = findViewById(R.id.fullName)
-
-    //    auth = FirebaseAuth.getInstance()
-//        database = FirebaseDatabase.getInstance()
-//        databaseReference = database?.reference!!.child("profile")
-
-//        loadProfile()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         homeFragment = HomeFragment()
@@ -56,7 +47,6 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
             .commit()
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            //we will select each menu item and add an event when it's selected
             when(item.itemId){
                 R.id.navigation_home -> {
                     homeFragment = HomeFragment()
@@ -120,24 +110,6 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
 
     }
 
-//    private fun loadProfile() {
-//
-//        val user = auth.currentUser
-//        val userreference = databaseReference?.child(user?.uid!!)
-//
-//
-//        userreference?.addValueEventListener(object: ValueEventListener{
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                fullName?.text = snapshot.child("fullName").value.toString()
-//
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                TODO("Not yet implemented")
-//            }
-//        })
-//
-//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.navigation, menu)
@@ -188,6 +160,7 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
                 val intent = Intent(this, SuccessStoriesActivity::class.java)
                 startActivity(intent) }
             R.id.Logout->{
+                auth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish() }
         }

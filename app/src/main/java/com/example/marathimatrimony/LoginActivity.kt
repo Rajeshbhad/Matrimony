@@ -82,21 +82,21 @@ class LoginActivity : AppCompatActivity() {
             edPassword.requestFocus()
             return
         }
-        auth.signInWithEmailAndPassword(edUsername.text.toString(), edPassword.text.toString())
-            .addOnCompleteListener(this)
+        auth.signInWithEmailAndPassword(edUsername.text.toString(), edPassword.text.toString()).addOnCompleteListener(this)
                { task ->
                    if (task.isSuccessful)
                        {
-                        val user:FirebaseUser? = auth.currentUser
+                        val user = auth.currentUser
                            if (user!!.isEmailVerified)
                            {
                                startActivity(Intent(this, NavigationActivity::class.java))
-                               Toast.makeText(baseContext, "Login Successfully.",Toast.LENGTH_SHORT).show()
+                               Toast.makeText(this, "Login Successfully.",Toast.LENGTH_SHORT).show()
                                finish()
                            }
                            else
                            {
-                               Toast.makeText(baseContext, "Please Check Your Email Verify Your Account!.",Toast.LENGTH_SHORT).show()
+                               user.sendEmailVerification()
+                               Toast.makeText(this, "Please Check Your Email Verify Your Account!.",Toast.LENGTH_SHORT).show()
                            }
                        }
                         else

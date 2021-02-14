@@ -13,7 +13,7 @@
     <string name="editAge">Enter Your Age</string>
     <string name="editPhoneNo">Enter Your Phone Number</string>
     <string name="editPassword">Enter Your Password</string>
-    <string name="rePassword">Enter Your RePassword</string>
+    <string name="editRePassword">Conform Your Password</string>
     <string name="btnRegister">Register</string>
     <string name="Registration">Registration</string>
     <string name="btnLogin">Login</string>

@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class  ForgotPasswordActivity : AppCompatActivity() {
     private  lateinit var auth: FirebaseAuth
     private lateinit var etUsername:EditText
 
