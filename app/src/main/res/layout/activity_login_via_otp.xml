@@ -24,24 +24,56 @@
             android:layout_gravity="center_horizontal"
             android:textColor="#000"
             android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/etPhoneNumber"
+        <LinearLayout
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="80dp"
-            android:hint="Enter Your Phone Number"
-            android:inputType="number" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="PHONE NUMBER"/>
 
-        <EditText
-            android:id="@+id/PhoneNumber"
+            <EditText
+                android:id="@+id/editPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="@string/editPhoneNo"
+                android:background="@drawable/shape7"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txtEmai"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="30dp"
-            android:hint="Enter Your OTP"
-            android:autofillHints="Username"
-            android:inputType="number" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="PHONE NUMBER"/>
+
+            <EditText
+                android:id="@+id/editotp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="@string/editPhoneNo"
+                android:background="@drawable/shape7"
+                android:inputType="number" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnSubmit"

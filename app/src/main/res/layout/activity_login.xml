@@ -38,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/tvUsername"
             android:hint="@string/tvUsername"
+            android:background="@drawable/shape7"
             android:autofillHints="Username"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -54,8 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/edPassword"
             android:hint="@string/edPassword"
+            android:background="@drawable/shape7"
             android:inputType="textPassword"
             android:autofillHints="Password" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -91,6 +91,7 @@
             android:autofillHints="Register"
             android:hint="@string/login"
             android:text="@string/btnLogin"
+            android:background="@drawable/shap4"
             android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/white" />
@@ -102,6 +103,7 @@
             android:autofillHints="Register"
             android:hint="@string/login"
             android:text="@string/btnRegister"
+            android:background="@drawable/shap4"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:textColor="@color/white" />

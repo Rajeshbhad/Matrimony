@@ -16,6 +16,7 @@
     <string name="editRePassword">Conform Your Password</string>
     <string name="btnRegister">Register</string>
     <string name="Registration">Registration</string>
+    <string name="dateOfBirth">Date Of Birth</string>
     <string name="btnLogin">Login</string>
     <string name="btnLoginWithOtp">Login Via OTP</string>
 

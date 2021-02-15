@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_margin="8dp">
+        android:layout_margin="10dp">
 
 
         <TextView
@@ -25,118 +24,249 @@
             android:layout_gravity="center_horizontal"
             android:padding="20dp"
             android:textStyle="italic|bold"/>
-        <TextView
+        <LinearLayout
+            android:id="@+id/txtProfile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="5dp"
-            android:text="ProfileCreatedFor"/>
-        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-            android:id="@+id/spinner_view"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="PROFILE CREATED FOR"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editProfileCreatedFor"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtName"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="#BAB7B7" />
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="NAME"/>
 
             <EditText
                 android:id="@+id/editUsername"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="Username"
+                android:layout_height="50dp"
                 android:ems="10"
-                android:text="@string/editUsername"
+                android:padding="8dp"
                 android:hint="@string/editUsername"
-                android:inputType="textPersonName" />
+                android:background="@drawable/shape7"
+                android:inputType="text" />
 
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textAge"
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtDateOfBirth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
-            <EditText
-                android:id="@+id/editAge"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:text="@string/editAge"
-                android:hint="@string/editAge"
-                android:inputType="textEmailSubject"/>
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="DATE OF BIRTH"/>
 
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
-            <EditText
-                android:id="@+id/editEmail"
+            <TextView
+                android:id="@+id/editDateOfBirth"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:text="@string/editEmail"
-                android:hint="@string/editEmail"
-                android:inputType="textEmailSubject" />
+                android:layout_height="50dp"
+                android:paddingTop="11dp"
+                android:paddingStart="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="DD/MM/YYYY"
+                android:background="@drawable/shape7"/>
 
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textPhoneNo"
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="GENDER"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/shape7"
+                    android:text="Mail" />
+
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_marginStart="30dp"
+                    android:paddingStart="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape7"
+                    android:text="Femail" />
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtProfileCreatedFor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="RELIGION"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editReligion"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="MOTHER TONGUE"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editMotherTongue"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="COUNTRY CODE"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editCountryCode"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="PHONE NUMBER"/>
 
             <EditText
                 android:id="@+id/editPhoneNo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="Username"
+                android:layout_height="50dp"
                 android:ems="10"
-                android:text="@string/editPhoneNo"
+                android:padding="8dp"
                 android:hint="@string/editPhoneNo"
+                android:background="@drawable/shape7"
                 android:inputType="number" />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textPassword"
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="EDIT MAIL"/>
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape7"
+                android:ems="10"
+                android:hint="@string/editEmail"
+                android:inputType="textEmailAddress"
+                android:padding="8dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ttDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="PASSWORD"/>
 
             <EditText
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:ems="10"
-                android:text="@string/editPassword"
+                android:padding="8dp"
                 android:hint="@string/editPassword"
+                android:background="@drawable/shape7"
                 android:inputType="textPassword" />
-
-
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
         <Button
             android:id="@+id/btnRRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="Register"
             android:hint="@string/btnRegister"
+            android:background="@drawable/shap4"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/white" />
         <Button
             android:id="@+id/btnRLogin"
@@ -144,8 +274,10 @@
             android:layout_height="wrap_content"
             android:autofillHints="Register"
             android:hint="@string/login"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shap4"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
             android:textColor="@color/white" />
 
     </LinearLayout>
