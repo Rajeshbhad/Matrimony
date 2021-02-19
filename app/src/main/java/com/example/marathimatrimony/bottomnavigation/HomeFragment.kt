@@ -20,8 +20,7 @@ class HomeFragment : Fragment() {
             private lateinit var db: FirebaseFirestore
             private lateinit var docRef: DocumentReference
             private lateinit var userID:String
-
-             private lateinit var fullName:TextView
+            private lateinit var fullName:TextView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -35,8 +34,6 @@ class HomeFragment : Fragment() {
         val view:View =inflater.inflate(R.layout.fragment_home, container, false)
         fullName=view.findViewById(R.id.fullName)
         docRef = db.collection("Users").document(userID)
-
-        super.onStart()
         docRef.addSnapshotListener { snapshot, e ->
             if (e != null) {
                 Log.w(TAG, "Listen failed.", e)
