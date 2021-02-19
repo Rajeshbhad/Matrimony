@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -15,6 +17,15 @@ import java.util.*
 class RegisterActivity : AppCompatActivity(){
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+    private lateinit var docRef: DocumentReference
+    private lateinit var userID:String
+
+    var radioGroup: RadioGroup? = null
+    lateinit var radioButton1: RadioButton
+    lateinit var radioButton2: RadioButton
+
+
     var cal = Calendar.getInstance()
     lateinit var editUsername: EditText
     lateinit var editEmail: EditText
@@ -22,8 +33,6 @@ class RegisterActivity : AppCompatActivity(){
     lateinit var editPassword: EditText
     lateinit var btnRRegister: Button
     lateinit var btnRLogin: Button
-
-
     lateinit var editProfileCreatedFor:Spinner
     lateinit var editDateOfBirth: TextView
     lateinit var editReligion:Spinner
@@ -31,16 +40,22 @@ class RegisterActivity : AppCompatActivity(){
     lateinit var editCountryCode:Spinner
 
 
-    lateinit var spinnerSelectedItemOne:String
-    lateinit var spinnerSelectedItemTwo:String
-    lateinit var spinnerSelectedItemThree:String
-    lateinit var spinnerSelectedItemFour:String
+
+     var spinnerSelectedItemOne: String? =null
+     var spinnerSelectedItemTwo: String? =null
+     var spinnerSelectedItemThree:String? =null
+     var spinnerSelectedItemFour:String? =null
+     var gender: String? =null
+     var DOB: String? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         auth = FirebaseAuth.getInstance()
+        db= FirebaseFirestore.getInstance()
+
+
 
         editUsername = findViewById(R.id.editUsername)
         editEmail = findViewById(R.id.editEmail)
@@ -53,6 +68,10 @@ class RegisterActivity : AppCompatActivity(){
         editReligion=findViewById(R.id.editReligion)
         editMotherTongue=findViewById(R.id.editMotherTongue)
         editCountryCode=findViewById(R.id.editCountryCode)
+        radioGroup = findViewById(R.id.radioGroup)
+        radioButton1=findViewById(R.id.radioBtn1)
+        radioButton2=findViewById(R.id.radioBtn2)
+
 
         btnRLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -61,22 +80,31 @@ class RegisterActivity : AppCompatActivity(){
             registerUser()
         }
 
+        radioButton1.setOnClickListener {
+            val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+            radioButton1 = findViewById(intSelectButton)
+            Toast.makeText(this, radioButton1.text, Toast.LENGTH_SHORT).show()
+            gender=radioButton1.text.toString()
+        }
+        radioButton2.setOnClickListener {
+            val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+            radioButton2 = findViewById(intSelectButton)
+            Toast.makeText(this, radioButton2.text, Toast.LENGTH_SHORT).show()
+            gender=radioButton2.text.toString()
+
+        }
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             updateDateInView()
+            DOB="$dayOfMonth/$monthOfYear/$year"
         }
 
-        // when you click on the button, show DatePickerDialog that is set with OnDateSetListener
         editDateOfBirth.setOnClickListener {
-            DatePickerDialog(this@RegisterActivity,
-                    dateSetListener,
-                    // set DatePickerDialog to point to today's date when it loads up
-                    cal.get(Calendar.YEAR),
-                    cal.get(Calendar.MONTH),
-                    cal.get(Calendar.DAY_OF_MONTH)).show()
+            DatePickerDialog(this@RegisterActivity, dateSetListener, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)).show()
         }
+
 
 
         val profileCreatedFor= arrayOf( "--Select--","Son","Brother","Relative","Friend")
@@ -84,9 +112,14 @@ class RegisterActivity : AppCompatActivity(){
         editProfileCreatedFor.adapter=arrayAdapter1
         editProfileCreatedFor.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                spinnerSelectedItemOne=editProfileCreatedFor.getItemAtPosition(position).toString()
+                if (position==0) {
+                     spinnerSelectedItemOne=null
+                }else{
+                    spinnerSelectedItemOne=editProfileCreatedFor.getItemAtPosition(position).toString()
+                }
             }
-            override fun onNothingSelected(parent: AdapterView<*>?){TODO("Not yet implemented")}
+            override fun onNothingSelected(parent: AdapterView<*>?){
+            }
         }
 
 
@@ -96,12 +129,16 @@ class RegisterActivity : AppCompatActivity(){
         editReligion.adapter=arrayAdapter2
         editReligion.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                spinnerSelectedItemTwo=editReligion.getItemAtPosition(position).toString()
+                if (position==0) {
+                    spinnerSelectedItemTwo=null
+                }else{
+                    spinnerSelectedItemTwo=editReligion.getItemAtPosition(position).toString()
+                }
             }
             override fun onNothingSelected(parent: AdapterView<*>?){TODO("Not yet implemented")}
         }
 
-        val motherTongue= arrayOf( "Marathi","Hindi","Bengali","Telugu","Tamil","Gujarati","Urdu","Bhojpuri","Kannada","Malayalam",
+        val motherTongue= arrayOf("--Select--", "Marathi","Hindi","Bengali","Telugu","Tamil","Gujarati","Urdu","Bhojpuri","Kannada","Malayalam",
                 "Odia","Punjabi","Rajasthani","Chhattisgarhi","Assamese","Assamese","Maithili","Magadhi/Magahi","Haryanvi","Khortha/Khotta","Marwari"
                 ,"Santali","Kashmiri","Bundeli/Bundel khandi","Malvi","Sadan/Sadri","Mewari","Awadhi","Wagdi","Lamani/Lambadi","Pahari[c]","Bhili/Bhilodi",
                 "Hara/Harauti","Nepali","Gondi","Bagheli/Baghel Khandi","Sambalpuri","Dogri","Garhwali","Nimadi","Surjapuri","Konkani","Kumauni","Kurukh/Oraon",
@@ -111,7 +148,11 @@ class RegisterActivity : AppCompatActivity(){
         editMotherTongue.adapter=arrayAdapter3
         editMotherTongue.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                spinnerSelectedItemThree=editMotherTongue.getItemAtPosition(position).toString()
+                if (position==0) {
+                    spinnerSelectedItemThree=null
+                }else{
+                    spinnerSelectedItemThree=editMotherTongue.getItemAtPosition(position).toString()
+                }
             }
             override fun onNothingSelected(parent: AdapterView<*>?){TODO("Not yet implemented")}
         }
@@ -153,7 +194,11 @@ class RegisterActivity : AppCompatActivity(){
         editCountryCode.adapter=arrayAdapter4
         editCountryCode.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                spinnerSelectedItemFour=editCountryCode.getItemAtPosition(position).toString()
+                if (position==0) {
+                    spinnerSelectedItemFour=null
+                }else{
+                    spinnerSelectedItemFour=editCountryCode.getItemAtPosition(position).toString()
+                }
             }
             override fun onNothingSelected(parent: AdapterView<*>?){TODO("Not yet implemented")}
         }
@@ -161,13 +206,68 @@ class RegisterActivity : AppCompatActivity(){
     }
     private fun registerUser() {
 
+        val profileCreatedFor=spinnerSelectedItemOne
+        val name=editUsername.text.toString().trim()
+        val dateOfBirth=DOB
+        val gender=gender
+        val religion=spinnerSelectedItemTwo
+        val motherTongue=spinnerSelectedItemThree
+        val countryCode=spinnerSelectedItemFour
+        val phoneNumber: String =editPhoneNo.text.toString()
+        val email:String=editEmail.text.toString()
+        val password:String=editPassword.text.toString().trim()
+
+        if (spinnerSelectedItemOne==null)
+        {
+            Toast.makeText(this, "Please Select Profile Created For ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemTwo==null)
+        {
+            Toast.makeText(this, "Please Select Religion  ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemThree==null)
+        {
+            Toast.makeText(this, "Please Select Mother Tongue ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemFour==null)
+        {
+            Toast.makeText(this, "Please Select Country Code  ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if(gender==null)
+        {
+            Toast.makeText(this, "Please Select gender ", Toast.LENGTH_SHORT).show()
+             return
+        }
+
+        if (editUsername.text.trim().toString().isEmpty())
+        {
+            editUsername.error = "Please Enter Full Name"
+            editUsername.requestFocus()
+            return
+        }
+        if (editDateOfBirth.text.trim().toString().isEmpty())
+        {
+            Toast.makeText(this, "Please Date Of Birth ", Toast.LENGTH_SHORT).show()
+            return
+
+        }
+        if (editPhoneNo.text.trim().toString().isEmpty())
+        {
+            editPhoneNo.error = "Please Enter 10 Digit Mobile No"
+            editPhoneNo.requestFocus()
+            return
+        }
         if (editEmail.text.trim().toString().isEmpty()) {
             editEmail.error = "Please Enter Email"
             editEmail.requestFocus()
             return
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(editEmail.text.toString()).matches()) {
-            editEmail.error = "Please Enter Email"
+            editEmail.error = "Please Enter Correct Email"
             editEmail.requestFocus()
             return
         }
@@ -183,10 +283,27 @@ class RegisterActivity : AppCompatActivity(){
         }
         auth.createUserWithEmailAndPassword(editEmail.text.toString(), editPassword.text.toString()).addOnCompleteListener(this)
         { task ->
-            if (task.isSuccessful) {
-                startActivity(Intent(this, LoginActivity::class.java))
-                Toast.makeText(this, "Registration Successfully.",Toast.LENGTH_SHORT).show()
-                finish()
+
+            if (task.isSuccessful)
+            {
+                userID= auth.currentUser!!.uid
+                docRef=db.collection("Users").document(userID)
+                val write=WriteRegistration(profileCreatedFor,name,dateOfBirth,gender,religion,motherTongue,countryCode,phoneNumber,email,password)
+
+                docRef.set(write).addOnCompleteListener{
+                    if (it.isSuccessful)
+                    {
+
+                        startActivity(Intent(this, LoginActivity::class.java))
+                        Toast.makeText(this, "Registration Successfully.",Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Registration Failed.",Toast.LENGTH_SHORT).show()
+
+                    }
+                }
             }
             else
             {

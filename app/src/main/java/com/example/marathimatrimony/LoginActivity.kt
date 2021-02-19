@@ -51,14 +51,9 @@ class LoginActivity : AppCompatActivity() {
         btnLLogin.setOnClickListener {
             loginUser()
         }
-
-
-
     }
-
-
     private fun loginUser() {
-        if(edUsername.text.toString().isEmpty())
+        if(edUsername.text.trim().toString().isEmpty())
         {
             edUsername.error="Please Enter Email"
             edUsername.requestFocus()
@@ -70,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
             edUsername.requestFocus()
             return
         }
-        if (edPassword.text.toString().isEmpty())
+        if (edPassword.text.trim().toString().isEmpty())
         {
             edPassword.error="Please Enter Password"
             edPassword.requestFocus()
@@ -110,14 +105,6 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         val currentUser:FirebaseUser? = auth.currentUser
         if(currentUser != null){
-            updateUI(currentUser)
-        }
-    }
-
-    private fun updateUI(currentUser: FirebaseUser?) {
-
-        if (currentUser!=null)
-        {
             if (currentUser.isEmailVerified) {
                 startActivity(Intent(this, NavigationActivity::class.java))
                 finish()

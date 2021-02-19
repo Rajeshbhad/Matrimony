@@ -72,22 +72,22 @@ class EditProfileActivity : AppCompatActivity(){
         //   Basic Details
         val msgOne=intent.getStringExtra("MessageOne")
         deafaultOne?.text = ":$msgOne"
-        val msgTwo=intent.getStringExtra("MessageTwo")
-        deafaultTwo?.text = ":$msgTwo"
-        val msgThree=intent.getStringExtra("MessageThree")
-        deafaultThree?.text = ":$msgThree"
-        val msgFour=intent.getStringExtra("MessageFour")
-        deafaultFour?.text = ":$msgFour"
-        val msgFive=intent.getStringExtra("MessageFive")
-        deafaultFive?.text = ":$msgFive"
-        val msgSix=intent.getStringExtra("MessageSix")
-        deafaultSix?.text = ":$msgSix"
-        val msgSeven=intent.getStringExtra("MessageSeven")
-        deafaultSeven?.text = ":$msgSeven"
-        val msgEight=intent.getStringExtra("MessageEight")
-        deafaultEight?.text = ":$msgEight"
-        val msgNine=intent.getStringExtra("MessageNine")
-        deafaultNine?.text = ":$msgNine"
+//        val msgTwo=intent.getStringExtra("MessageTwo")
+//        deafaultTwo?.text = ":$msgTwo"
+//        val msgThree=intent.getStringExtra("MessageThree")
+//        deafaultThree?.text = ":$msgThree"
+//        val msgFour=intent.getStringExtra("MessageFour")
+//        deafaultFour?.text = ":$msgFour"
+//        val msgFive=intent.getStringExtra("MessageFive")
+//        deafaultFive?.text = ":$msgFive"
+//        val msgSix=intent.getStringExtra("MessageSix")
+//        deafaultSix?.text = ":$msgSix"
+//        val msgSeven=intent.getStringExtra("MessageSeven")
+//        deafaultSeven?.text = ":$msgSeven"
+//        val msgEight=intent.getStringExtra("MessageEight")
+//        deafaultEight?.text = ":$msgEight"
+//        val msgNine=intent.getStringExtra("MessageNine")
+//        deafaultNine?.text = ":$msgNine"
 
 
         add_contacts.setOnClickListener {

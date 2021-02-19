@@ -6,7 +6,7 @@
     <string name="button">Login</string>
     <string name="login">Login</string>
     <string name="edPassword">Password</string>
-    <string name="tvUsername">Username</string>
+    <string name="tvUsername">Email Id</string>
     <string name="register">Register?</string>
     <string name="editUsername">Enter your Full Name</string>
     <string name="editEmail">Enter Your Email</string>

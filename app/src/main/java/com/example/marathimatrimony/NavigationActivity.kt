@@ -20,7 +20,6 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
 
      lateinit var auth: FirebaseAuth
 
-
      lateinit var toolbar: Toolbar
      lateinit var navigationView: NavigationView
      lateinit var drawerLayout: DrawerLayout
