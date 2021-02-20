@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForgotPasswordActivity">
+    tools:context=".LoginViaOtp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="15dp"
-
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_vertical">
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -24,32 +23,7 @@
             android:textColor="#000"
             android:textStyle="bold"/>
         <LinearLayout
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:textColor="@color/black"
-                android:text="PHONE NUMBER"/>
-
-            <EditText
-                android:id="@+id/editPhoneNo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:padding="8dp"
-                android:hint="@string/editPhoneNo"
-                android:background="@drawable/shape7"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/txtEmai"
+            android:id="@+id/phoneNumberLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
@@ -61,10 +35,43 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:textColor="@color/black"
+                android:text="PHONE NUMBER"/>
+
+
+            <EditText
+                android:id="@+id/enterPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="@string/editPhoneNo"
+                android:background="@drawable/shape7"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGetOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="get OTP" />
+
+        <LinearLayout
+            android:id="@+id/otpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
                 android:text="OTP"/>
 
             <EditText
-                android:id="@+id/editotp"
+                android:id="@+id/enterOTP"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
@@ -72,14 +79,14 @@
                 android:hint="Enter OTP"
                 android:background="@drawable/shape7"
                 android:inputType="number" />
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="login" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Submit" />
 
     </LinearLayout>
 </ScrollView>

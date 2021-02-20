@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "124740846952-c4np3v3206kqhmk5fgs22aj87l7hrru5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marathimatrimony",
+            "certificate_hash": "a9b5ff5cb68fe0d6961f73bc89a0133b9c29af70"
+          }
+        },
+        {
           "client_id": "124740846952-vlepu7bosjvuvnjedpb2bin7r4gjamlg.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -21,11 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:textColor="#131515"
+        android:textColor="#DD1616"
         android:textSize="35sp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold|italic"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvUsername"

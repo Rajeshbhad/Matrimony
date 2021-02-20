@@ -3,6 +3,8 @@
     package="com.example.marathimatrimony">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MarathiMatrimony">
-        <activity android:name=".LoginViaOtp"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
@@ -22,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginViaOtp" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:label="@string/app_name"
