@@ -7,6 +7,7 @@ import android.util.Patterns
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.marathimatrimony.datamodel.WriteRegistration
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -46,7 +47,7 @@ class RegisterActivity : AppCompatActivity(){
      var spinnerSelectedItemThree:String? =null
      var spinnerSelectedItemFour:String? =null
      var gender: String? =null
-     var DOB: String? =null
+     private var DOB: String? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -108,7 +109,7 @@ class RegisterActivity : AppCompatActivity(){
 
 
         val profileCreatedFor= arrayOf( "--Select--","Son","Brother","Relative","Friend")
-         val arrayAdapter1=ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,profileCreatedFor)
+        val arrayAdapter1=ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,profileCreatedFor)
         editProfileCreatedFor.adapter=arrayAdapter1
         editProfileCreatedFor.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -288,7 +289,7 @@ class RegisterActivity : AppCompatActivity(){
             {
                 userID= auth.currentUser!!.uid
                 docRef=db.collection("Users").document(userID)
-                val write=WriteRegistration(profileCreatedFor,name,dateOfBirth,gender,religion,motherTongue,countryCode,phoneNumber,email,password)
+                val write= WriteRegistration(profileCreatedFor,name,dateOfBirth,gender,religion,motherTongue,countryCode,phoneNumber,email,password)
 
                 docRef.set(write).addOnCompleteListener{
                     if (it.isSuccessful)
