@@ -1,4 +1,4 @@
-package com.example.marathimatrimony
+package com.example.marathimatrimony.datamodel
 
 data class WriteRegistration(
         val profileCreatedFor: String? ="",
@@ -10,6 +10,8 @@ data class WriteRegistration(
         val countryCode: String? ="",
         val phoneNumber: String="",
         val Email: String = "",
-        val password:String="",
+        val password:String=""
 )
+
+
 

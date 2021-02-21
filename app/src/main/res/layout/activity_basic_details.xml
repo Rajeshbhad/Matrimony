@@ -20,134 +20,173 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:textStyle="bold" />
-        <TextView
+
+        <LinearLayout
+            android:id="@+id/txtProfile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="ProfileCreatedFor"/>
-        <Spinner
-            android:id="@+id/editProfileCreatedFor"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="PROFILE CREATED FOR"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editProfileCreatedFor"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtName"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="select city" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="NAME"/>
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="@string/editUsername"
+                android:background="@drawable/shape7"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/black"
+                android:text="DATE OF BIRTH"/>
+
+            <TextView
+                android:id="@+id/editDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="11dp"
+                android:paddingStart="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:hint="DD/MM/YYYY"
+                android:background="@drawable/shape7"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="HEIGHT"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editHeight"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtWeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="WEIGHT"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editWeight"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtMaritalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="MARITAL STATUS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editMaritalStatus"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtBodyType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="BODY TYPE"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editBodyType"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txtMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="MOTHER TONGUE"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editMotherTongue"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Name"/>
-        <EditText
-            android:id="@+id/EditName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
-            android:textSize="16sp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="1dp"
-            android:height="40dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Age/Date Of Birth"/>
-        <EditText
-            android:id="@+id/age_and_date_of_birth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="DD/MM/YYYY"
-            android:inputType="date"
-            android:textSize="16sp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="1dp"
-            android:height="40dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Height"/>
-
-        <Spinner
-            android:id="@+id/editHeight"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayHeight"
-            android:text="select city" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Height"/>
-
-        <Spinner
-            android:id="@+id/editWeight"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayWeight"
-            android:text="select city" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Marital Status"/>
-
-        <Spinner
-            android:id="@+id/editMaritalStatus"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayMaritalStatus"
-            android:text="select city" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Body Type"/>
-        <Spinner
-            android:id="@+id/editBodyType"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayBodyType"
-            android:text="Body Type" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Mother Tongue"/>
-        <Spinner
-            android:id="@+id/editMotherTongue"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayMotherTongue"
-            android:text="Body Type" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
             android:background="#BAB7B7" />
         <Switch
             android:id="@+id/simpleSwitch"
@@ -163,54 +202,60 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#BAB7B7" />
-        <TextView
+        <LinearLayout
+            android:id="@+id/txtEatingHabits"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Eating Habits"/>
-        <Spinner
-            android:id="@+id/editEatingHabits"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="EATING HABITS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editEatingHabits"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtDrinkingHabits"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayEatingHabits"
-            android:text="Body Type" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="DRINKING HABITS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editDrinkingHabits"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtSmokingHabits"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Drinking Habits"/>
-        <Spinner
-            android:id="@+id/editDrinkingHabits"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayDrinkingHabits"
-            android:text="Body Type" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Smoking Habits"/>
-        <Spinner
-            android:id="@+id/editSmokingHabits"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arraySmokingHabits"
-            android:text="Body Type" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="SMOKING HABITS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editSmokingHabits"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
         <Button
             android:id="@+id/basicDetailsSaveBtn"
             android:layout_width="250dp"

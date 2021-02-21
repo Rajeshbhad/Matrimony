@@ -5,18 +5,28 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 class EditProfileActivity : AppCompatActivity(){
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+    private lateinit var docRef: DocumentReference
+    private lateinit var userID:String
        //   Basic Details
-       var deafaultOne: TextView?=null
-       var deafaultTwo: TextView?=null
-       var deafaultThree: TextView?=null
-       var deafaultFour: TextView?=null
-       var deafaultFive: TextView?=null
-       var deafaultSix: TextView?=null
-       var deafaultSeven: TextView?=null
-       var deafaultEight: TextView?=null
-       var deafaultNine: TextView?=null
+       var ProfileCreatedFor: TextView?=null
+       var Name:TextView?=null
+       var Age:TextView?=null
+       var Height: TextView?=null
+       var Weight: TextView?=null
+       var MaritalStatus: TextView?=null
+       var BodyType: TextView?=null
+       var MotherTongue: TextView?=null
+       var eatingHabits: TextView?=null
+       var drinkingHabits: TextView?=null
+       var smokinghabits: TextView?=null
 
 
      lateinit var in_my_own_words_card_view :LinearLayout
@@ -41,16 +51,22 @@ class EditProfileActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
         //   Basic Details
-        deafaultOne=findViewById(R.id.ProfileCreatedFor)
-        deafaultTwo=findViewById(R.id.Height)
-        deafaultThree=findViewById(R.id.Weight)
-        deafaultFour=findViewById(R.id.MaritalStatus)
-        deafaultFive=findViewById(R.id.BodyType)
-        deafaultSix=findViewById(R.id.MotherTongue)
-        deafaultSeven=findViewById(R.id.eatingHabits)
-        deafaultEight=findViewById(R.id.drinkingHabits)
-        deafaultNine=findViewById(R.id.smoking_habits)
+        ProfileCreatedFor=findViewById(R.id.ProfileCreatedFor)
+        Name=findViewById(R.id.Name)
+        Age=findViewById(R.id.Age)
+        Height=findViewById(R.id.Height)
+        Weight=findViewById(R.id.Weight)
+        MaritalStatus=findViewById(R.id.MaritalStatus)
+        BodyType=findViewById(R.id.BodyType)
+        MotherTongue=findViewById(R.id.MotherTongue)
+        eatingHabits=findViewById(R.id.eatingHabits)
+        drinkingHabits=findViewById(R.id.drinkingHabits)
+        smokinghabits=findViewById(R.id.smoking_habits)
 
+        auth= FirebaseAuth.getInstance()
+        db= FirebaseFirestore.getInstance()
+        userID= auth.currentUser!!.uid
+        docRef = db.collection("Users").document(userID)
 
         add_contacts = findViewById(R.id.add_contacts)
         add_horoscope = findViewById(R.id.add_horoscope)
@@ -69,25 +85,8 @@ class EditProfileActivity : AppCompatActivity(){
         location_preferences_card_view = findViewById(R.id.location_preferences_card_view)
         what_i_am_looking_for_card_view = findViewById(R.id.what_i_am_looking_for_card_view)
 
-        //   Basic Details
-        val msgOne=intent.getStringExtra("MessageOne")
-        deafaultOne?.text = ":$msgOne"
-//        val msgTwo=intent.getStringExtra("MessageTwo")
-//        deafaultTwo?.text = ":$msgTwo"
-//        val msgThree=intent.getStringExtra("MessageThree")
-//        deafaultThree?.text = ":$msgThree"
-//        val msgFour=intent.getStringExtra("MessageFour")
-//        deafaultFour?.text = ":$msgFour"
-//        val msgFive=intent.getStringExtra("MessageFive")
-//        deafaultFive?.text = ":$msgFive"
-//        val msgSix=intent.getStringExtra("MessageSix")
-//        deafaultSix?.text = ":$msgSix"
-//        val msgSeven=intent.getStringExtra("MessageSeven")
-//        deafaultSeven?.text = ":$msgSeven"
-//        val msgEight=intent.getStringExtra("MessageEight")
-//        deafaultEight?.text = ":$msgEight"
-//        val msgNine=intent.getStringExtra("MessageNine")
-//        deafaultNine?.text = ":$msgNine"
+           basicDetails()
+
 
 
         add_contacts.setOnClickListener {
@@ -160,5 +159,28 @@ class EditProfileActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
+    }
+
+    private fun basicDetails() {
+        docRef.addSnapshotListener{ snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    ProfileCreatedFor!!.text = snapshot.getString("profileCreatedFor")
+                    Name!!.text= snapshot.getString("name")
+                    Age!!.text= snapshot.getString("dateOfBirth")
+                    Height!!.text=snapshot.getString("height")
+                    Weight!!.text=snapshot.getString("weight")
+                    MaritalStatus!!.text=snapshot.getString("maritalStatus")
+                    BodyType!!.text=snapshot.getString("bodyType")
+                    MotherTongue!!.text=snapshot.getString("motherTongue")
+                    eatingHabits!!.text=snapshot.getString("eatingHabits")
+                    drinkingHabits!!.text=snapshot.getString("drinkingHabits")
+                    smokinghabits!!.text=snapshot.getString("smokingHabits")
+
+                }
+            }
+        }
     }
 }
