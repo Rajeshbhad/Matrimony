@@ -54,7 +54,7 @@
                 android:text="NAME"/>
 
             <EditText
-                android:id="@+id/editUsername"
+                android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"

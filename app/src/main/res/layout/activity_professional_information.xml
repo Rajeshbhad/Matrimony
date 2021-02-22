@@ -20,117 +20,136 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:textStyle="bold" />
-        <TextView
+        <LinearLayout
+            android:id="@+id/txtProfile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Highest Education"/>
-        <Spinner
-            android:id="@+id/editHighestEducation"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="HIGHEST EDUCATION"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editHighestEducation"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="HighestEducation" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="ENTER COLLEGE AND INSTITUTION"/>
+            <EditText
+                android:id="@+id/editCollegeAndInstitution"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="Enter College and Institution"
+                android:background="@drawable/shape7"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="EMPLOYED IN" />
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editEmployedIn"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Enter College and Institution"/>
-        <EditText
-            android:id="@+id/editEnterCollegeInstitution"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="OCCUPATION" />
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editOccupation"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter College and Institution"
-            android:textSize="17sp"
-            android:inputType="textCapSentences"
-            android:layout_marginTop="2dp" />
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="ENTER ORGANIZATION NAME"/>
+            <EditText
+                android:id="@+id/editOrganizationName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:hint="Enter Organization Name"
+                android:background="@drawable/shape7"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Employed In"/>
-        <Spinner
-            android:id="@+id/editEmployedIn"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="CURRENCY TYPE" />
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editCurrencyType"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Employed In" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Occupation"/>
-        <Spinner
-            android:id="@+id/editOccupation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Occupation" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Enter Organization Name"/>
-        <EditText
-            android:id="@+id/editEnterOrganizationName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Organizatio nName"
-            android:textSize="17sp"
-            android:inputType="textCapSentences"
-            android:layout_marginTop="2dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Currency Type"/>
-        <Spinner
-            android:id="@+id/editCurrencyType"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="CurrencyType" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Enter Annual Income"/>
-
-        <Spinner
-            android:id="@+id/editEnterAnnualIncome"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="EnterAnnualIncome" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="ENTER ANNUAL INCOME"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editEnterAnnualIncome"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
         <Button
-            android:id="@+id/ReligiousInformationSaveBtn"
+            android:id="@+id/professionalInformationSaveBtn"
             android:layout_width="250dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape6"

@@ -21,7 +21,7 @@ class BasicDetails : AppCompatActivity() {
     private lateinit var userID:String
 
     lateinit var editProfileCreatedFor :Spinner
-    lateinit var editUsername :EditText
+    lateinit var editName :EditText
     lateinit var editDateOfBirth: TextView
     lateinit var editHeight  :Spinner
     lateinit var editWeight  :Spinner
@@ -57,7 +57,7 @@ class BasicDetails : AppCompatActivity() {
 
         editProfileCreatedFor = findViewById(R.id.editProfileCreatedFor)
         editDateOfBirth = findViewById(R.id.editDateOfBirth)
-        editUsername= findViewById(R.id.editUsername)
+        editName= findViewById(R.id.editName)
         editHeight = findViewById(R.id.editHeight)
         editWeight = findViewById(R.id.editWeight)
         editMaritalStatus = findViewById(R.id.editMaritalStatus)
@@ -219,7 +219,7 @@ class BasicDetails : AppCompatActivity() {
 
     private fun save() {
         val profileCreatedFor=spinnerSelectedItemOne
-        val name=editUsername.text.toString().trim()
+        val name=editName.text.toString().trim()
         val dateOfBirth=DOB
         val height=spinnerSelectedItemTwo
         val weight=spinnerSelectedItemThree
@@ -235,10 +235,10 @@ class BasicDetails : AppCompatActivity() {
             Toast.makeText(this, "Please Select Profile Created For ", Toast.LENGTH_SHORT).show()
             return
         }
-        if (editUsername.text.trim().toString().isEmpty())
+        if (editName.text.trim().toString().isEmpty())
         {
-            editUsername.error = "Please Enter Full Name"
-            editUsername.requestFocus()
+            editName.error = "Please Enter Full Name"
+            editName.requestFocus()
             return
         }
         if (editDateOfBirth.text.trim().toString().isEmpty())
@@ -247,46 +247,46 @@ class BasicDetails : AppCompatActivity() {
             return
 
         }
-//        if (spinnerSelectedItemTwo==null)
-//        {
-//            Toast.makeText(this, "Please Select Height  ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemThree==null)
-//        {
-//            Toast.makeText(this, "Please Select Weight ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemFour==null)
-//        {
-//            Toast.makeText(this, "Please Select Marital Status  ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemFive==null)
-//        {
-//            Toast.makeText(this, "Please Select BodyType ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemSix==null)
-//        {
-//            Toast.makeText(this, "Please Select MotherTongue", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemSeven==null)
-//        {
-//            Toast.makeText(this, "Please Select Eating Habits ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemEight==null)
-//        {
-//            Toast.makeText(this, "Please Select Drinking Habits  ", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//        if (spinnerSelectedItemNine==null)
-//        {
-//            Toast.makeText(this, "Please Select Smoking Habits", Toast.LENGTH_SHORT).show()
-//            return
-//        }
+        if (spinnerSelectedItemTwo==null)
+        {
+            Toast.makeText(this, "Please Select Height  ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemThree==null)
+        {
+            Toast.makeText(this, "Please Select Weight ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemFour==null)
+        {
+            Toast.makeText(this, "Please Select Marital Status  ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemFive==null)
+        {
+            Toast.makeText(this, "Please Select BodyType ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemSix==null)
+        {
+            Toast.makeText(this, "Please Select MotherTongue", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemSeven==null)
+        {
+            Toast.makeText(this, "Please Select Eating Habits ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemEight==null)
+        {
+            Toast.makeText(this, "Please Select Drinking Habits  ", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (spinnerSelectedItemNine==null)
+        {
+            Toast.makeText(this, "Please Select Smoking Habits", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         userID= auth.currentUser!!.uid
         docRef=db.collection("Users").document(userID)

@@ -20,174 +20,190 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:textStyle="bold" />
-        <TextView
-            android:id="@+id/FamilyValues"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Family Values"/>
-        <Spinner
-            android:id="@+id/editFamilyValues"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/FamilyValues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAMILY VALUES"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editFamilyValues"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Family Values" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/FamilyType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAMILY TYPE"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editProfileCreatedFor"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/FamilyType"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/FamilyStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAMILY STATUS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editFamilyStatus"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Family Type"/>
-        <Spinner
-            android:id="@+id/editProfileCreatedFor"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/FathersOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FATHER OCCUPATION"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editFathersOccupation"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Family Type" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/MothersOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="MOTHER OCCUPATION"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editMothersOccupation"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/FamilyStatus"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Brothers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="BROTHERS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editBrothers"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Family Status"/>
-        <Spinner
-            android:id="@+id/editFamilyStatus"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/BrothersMarried"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="BROTHERS MARRIED"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editBrothersMarried"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Family Status" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Sisters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="SISTERS"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editSisters"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/FathersOccupation"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/SistersMarried"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="SISTERS MARRIED"/>
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editSistersMarried"
+                android:background="@drawable/shape7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Fathers Occupation"/>
-        <Spinner
-            android:id="@+id/editFathersOccupation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Fathers Occupation" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/MothersOccupation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Mothers Occupation"/>
-        <Spinner
-            android:id="@+id/editMothersOccupation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Mothers Occupation" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/MothersBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="No Of Brother(s)"/>
-        <Spinner
-            android:id="@+id/editMothersBrothers"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="No Of Brother(s)" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/BrothersMarried"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Brother(s) Married"/>
-        <Spinner
-            android:id="@+id/editBrothersMarried"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Brother(s) Married" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/Sisters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Sister(s)"/>
-        <Spinner
-            android:id="@+id/editSisters"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="No Of Sister(s)" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/SistersMarried"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Sister(s) Married"/>
-        <Spinner
-            android:id="@+id/editSistersMarried"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Sister(s) Married" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:id="@+id/EnterAncestralOrigin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Enter Ancestral Origin"/>
-        <EditText
-            android:id="@+id/txt_eating_habits"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Ancestral Origin"
-            android:textSize="17sp"
-            android:inputType="textCapSentences"
-            android:layout_margin="1dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/EnterAncestralOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="ENTER ANCESTRAL ORIGIN"/>
+            <EditText
+                android:id="@+id/editEnterAncestralOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:text="Enter Ancestral Origin"
+                android:background="@drawable/shape7"
+                android:inputType="textPersonName" />
+        </LinearLayout>
         <Button
             android:id="@+id/FamilyDetailsSaveBtn"
             android:layout_width="250dp"

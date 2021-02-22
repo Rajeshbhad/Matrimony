@@ -688,7 +688,7 @@
                     android:textColor="@color/black"
                     android:text="@string/religion"/>
                 <TextView
-                    android:id="@+id/religion"
+                    android:id="@+id/Religion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -709,7 +709,7 @@
                     android:textColor="@color/black"
                     android:text="@string/caste"/>
                 <TextView
-                    android:id="@+id/caste"
+                    android:id="@+id/Caste"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -730,7 +730,7 @@
                     android:textColor="@color/black"
                     android:text="@string/gothra"/>
                 <TextView
-                    android:id="@+id/gothra"
+                    android:id="@+id/GothraM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -751,7 +751,7 @@
                     android:textColor="@color/black"
                     android:text="@string/zodic"/>
                 <TextView
-                    android:id="@+id/zodic"
+                    android:id="@+id/Zodic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -772,7 +772,7 @@
                     android:textColor="@color/black"
                     android:text="@string/star"/>
                 <TextView
-                    android:id="@+id/star"
+                    android:id="@+id/Star"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -793,7 +793,7 @@
                     android:textColor="@color/black"
                     android:text="rassi"/>
                 <TextView
-                    android:id="@+id/body_rassi"
+                    android:id="@+id/Raasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -856,7 +856,7 @@
                     android:textColor="@color/black"
                     android:text="@string/education_category"/>
                 <TextView
-                    android:id="@+id/education_category"
+                    android:id="@+id/EducationCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -877,7 +877,7 @@
                     android:textColor="@color/black"
                     android:text="@string/college_institution"/>
                 <TextView
-                    android:id="@+id/collage_institution"
+                    android:id="@+id/CollageInstitution"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -898,7 +898,7 @@
                     android:textColor="@color/black"
                     android:text="@string/occupation"/>
                 <TextView
-                    android:id="@+id/occupation"
+                    android:id="@+id/Occupation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -919,7 +919,7 @@
                     android:textColor="@color/black"
                     android:text="@string/organization"/>
                 <TextView
-                    android:id="@+id/organization"
+                    android:id="@+id/Organization"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -940,7 +940,7 @@
                     android:textColor="@color/black"
                     android:text="@string/employed_in"/>
                 <TextView
-                    android:id="@+id/employed_in"
+                    android:id="@+id/EmployedIn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -962,7 +962,7 @@
                     android:text="@string/annual_income"/>
 
                 <TextView
-                    android:id="@+id/annual_income"
+                    android:id="@+id/AnnualIncome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"

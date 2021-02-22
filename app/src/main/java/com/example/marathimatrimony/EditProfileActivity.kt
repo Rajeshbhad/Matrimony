@@ -9,63 +9,93 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
-class EditProfileActivity : AppCompatActivity(){
+class EditProfileActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
     private lateinit var docRef: DocumentReference
-    private lateinit var userID:String
-       //   Basic Details
-       var ProfileCreatedFor: TextView?=null
-       var Name:TextView?=null
-       var Age:TextView?=null
-       var Height: TextView?=null
-       var Weight: TextView?=null
-       var MaritalStatus: TextView?=null
-       var BodyType: TextView?=null
-       var MotherTongue: TextView?=null
-       var eatingHabits: TextView?=null
-       var drinkingHabits: TextView?=null
-       var smokinghabits: TextView?=null
+    private lateinit var userID: String
 
+    //   Basic Details
+    var ProfileCreatedFor: TextView? = null
+    var Name: TextView? = null
+    var Age: TextView? = null
+    var Height: TextView? = null
+    var Weight: TextView? = null
+    var MaritalStatus: TextView? = null
+    var BodyType: TextView? = null
+    var MotherTongue: TextView? = null
+    var EatingHabits: TextView? = null
+    var DrinkingHabits: TextView? = null
+    var Smokinghabits: TextView? = null
 
-     lateinit var in_my_own_words_card_view :LinearLayout
-     lateinit var basic_details_card_view :LinearLayout
-     lateinit var religious_information_card_view :LinearLayout
-     lateinit var professional_information_card_view :LinearLayout
-     lateinit var location_card_view :LinearLayout
-     lateinit var family_details_card_view :LinearLayout
-     lateinit var about_my_family_card_view :LinearLayout
-     lateinit var hobbies_and_interests_card_view :LinearLayout
-     lateinit var basic_preferences_card_view :LinearLayout
-     lateinit var religious_preferences_card_view :LinearLayout
-     lateinit var professional_preferences_card_view :LinearLayout
-     lateinit var location_preferences_card_view :LinearLayout
-     lateinit var what_i_am_looking_for_card_view :LinearLayout
-     lateinit var add_contacts :LinearLayout
-     lateinit var add_horoscope :LinearLayout
-     lateinit var add_photos :LinearLayout
+    var Religion: TextView? = null
+    var Caste: TextView? = null
+    var SubCaste: TextView? = null
+    var GothraM: TextView? = null
+    var Star: TextView? = null
+    var RaasiAndMoonSign: TextView? = null
+    var ZodicAndStarSign: TextView? = null
+    var HavingDosham: TextView? = null
+
+    var EducationCategory: TextView? = null
+    var CollageAndInstitution: TextView? = null
+    var Occupation: TextView? = null
+    var Organization: TextView? = null
+    var EmployedIn:TextView? = null
+    var AnnualIncome:TextView? = null
+
+    lateinit var in_my_own_words_card_view: LinearLayout
+    lateinit var basic_details_card_view: LinearLayout
+    lateinit var religious_information_card_view: LinearLayout
+    lateinit var professional_information_card_view: LinearLayout
+    lateinit var location_card_view: LinearLayout
+    lateinit var family_details_card_view: LinearLayout
+    lateinit var about_my_family_card_view: LinearLayout
+    lateinit var hobbies_and_interests_card_view: LinearLayout
+    lateinit var basic_preferences_card_view: LinearLayout
+    lateinit var religious_preferences_card_view: LinearLayout
+    lateinit var professional_preferences_card_view: LinearLayout
+    lateinit var location_preferences_card_view: LinearLayout
+    lateinit var what_i_am_looking_for_card_view: LinearLayout
+    lateinit var add_contacts: LinearLayout
+    lateinit var add_horoscope: LinearLayout
+    lateinit var add_photos: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
         //   Basic Details
-        ProfileCreatedFor=findViewById(R.id.ProfileCreatedFor)
-        Name=findViewById(R.id.Name)
-        Age=findViewById(R.id.Age)
-        Height=findViewById(R.id.Height)
-        Weight=findViewById(R.id.Weight)
-        MaritalStatus=findViewById(R.id.MaritalStatus)
-        BodyType=findViewById(R.id.BodyType)
-        MotherTongue=findViewById(R.id.MotherTongue)
-        eatingHabits=findViewById(R.id.eatingHabits)
-        drinkingHabits=findViewById(R.id.drinkingHabits)
-        smokinghabits=findViewById(R.id.smoking_habits)
+        ProfileCreatedFor = findViewById(R.id.ProfileCreatedFor)
+        Name = findViewById(R.id.Name)
+        Age = findViewById(R.id.Age)
+        Height = findViewById(R.id.Height)
+        Weight = findViewById(R.id.Weight)
+        MaritalStatus = findViewById(R.id.MaritalStatus)
+        BodyType = findViewById(R.id.BodyType)
+        MotherTongue = findViewById(R.id.MotherTongue)
+        EatingHabits = findViewById(R.id.eatingHabits)
+        DrinkingHabits = findViewById(R.id.drinkingHabits)
+        Smokinghabits = findViewById(R.id.smoking_habits)
 
-        auth= FirebaseAuth.getInstance()
-        db= FirebaseFirestore.getInstance()
-        userID= auth.currentUser!!.uid
+        Religion = findViewById(R.id.Religion)
+        Caste = findViewById(R.id.Caste)
+        GothraM = findViewById(R.id.GothraM)
+        Star = findViewById(R.id.Star)
+        ZodicAndStarSign = findViewById(R.id.Zodic)
+        RaasiAndMoonSign = findViewById(R.id.Raasi)
+
+        EducationCategory= findViewById(R.id.EducationCategory)
+        CollageAndInstitution= findViewById(R.id.CollageInstitution)
+        Occupation= findViewById(R.id.Occupation)
+        Organization= findViewById(R.id.Organization)
+        EmployedIn= findViewById(R.id.EmployedIn)
+        AnnualIncome= findViewById(R.id.AnnualIncome)
+
+        auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
+        userID = auth.currentUser!!.uid
         docRef = db.collection("Users").document(userID)
 
         add_contacts = findViewById(R.id.add_contacts)
@@ -85,7 +115,9 @@ class EditProfileActivity : AppCompatActivity(){
         location_preferences_card_view = findViewById(R.id.location_preferences_card_view)
         what_i_am_looking_for_card_view = findViewById(R.id.what_i_am_looking_for_card_view)
 
-           basicDetails()
+        basicDetails()
+        religiousInformation()
+        professionalnformation()
 
 
 
@@ -162,25 +194,60 @@ class EditProfileActivity : AppCompatActivity(){
     }
 
     private fun basicDetails() {
-        docRef.addSnapshotListener{ snapshot, e ->
+        docRef.addSnapshotListener { snapshot, e ->
             if (e != null) {
                 return@addSnapshotListener
             } else {
                 if (snapshot != null && snapshot.exists()) {
                     ProfileCreatedFor!!.text = snapshot.getString("profileCreatedFor")
-                    Name!!.text= snapshot.getString("name")
-                    Age!!.text= snapshot.getString("dateOfBirth")
-                    Height!!.text=snapshot.getString("height")
-                    Weight!!.text=snapshot.getString("weight")
-                    MaritalStatus!!.text=snapshot.getString("maritalStatus")
-                    BodyType!!.text=snapshot.getString("bodyType")
-                    MotherTongue!!.text=snapshot.getString("motherTongue")
-                    eatingHabits!!.text=snapshot.getString("eatingHabits")
-                    drinkingHabits!!.text=snapshot.getString("drinkingHabits")
-                    smokinghabits!!.text=snapshot.getString("smokingHabits")
+                    Name!!.text = snapshot.getString("name")
+                    Age!!.text = snapshot.getString("dateOfBirth")
+                    Height!!.text = snapshot.getString("height")
+                    Weight!!.text = snapshot.getString("weight")
+                    MaritalStatus!!.text = snapshot.getString("maritalStatus")
+                    BodyType!!.text = snapshot.getString("bodyType")
+                    MotherTongue!!.text = snapshot.getString("motherTongue")
+                    EatingHabits!!.text = snapshot.getString("eatingHabits")
+                    DrinkingHabits!!.text = snapshot.getString("drinkingHabits")
+                    Smokinghabits!!.text = snapshot.getString("smokingHabits")
+
 
                 }
             }
         }
     }
+
+    private fun religiousInformation() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    Religion!!.text = snapshot.getString("religion")
+                    Caste!!.text = snapshot.getString("caste")
+                    GothraM!!.text = snapshot.getString("gothraM")
+                    Star!!.text = snapshot.getString("star")
+                    RaasiAndMoonSign!!.text = snapshot.getString("raasiAndMoonSign")
+                    ZodicAndStarSign!!.text = snapshot.getString("zodicAndStarSign")
+                }
+            }
+        }
+    }
+    private fun professionalnformation() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    EducationCategory!!.text = snapshot.getString("highestEducation")
+                    CollageAndInstitution!!.text = snapshot.getString("collegeAndInstitution")
+                    Occupation!!.text = snapshot.getString("occupation")
+                    Organization!!.text = snapshot.getString("organization")
+                    EmployedIn!!.text = snapshot.getString("employedIn")
+                    AnnualIncome!!.text = snapshot.getString("annualIncome")
+                }
+            }
+        }
+    }
+
 }
