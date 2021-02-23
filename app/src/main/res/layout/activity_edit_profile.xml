@@ -345,22 +345,19 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/in_my_own_words"
-                    android:layout_width="113dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:text="@string/name"/>
-
-                <TextView
                     android:id="@+id/InMyOwnWords"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text=":"
+                    android:hint="Enter In My Own Words "
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#7A7979" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
