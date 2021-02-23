@@ -339,19 +339,28 @@
                     android:layout_gravity="center_horizontal|end"
                     app:srcCompat="@drawable/ic_menu_edit_profile"/>
             </LinearLayout>
-            <TextView
-                android:id="@+id/in_my_own_words"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:text="@string/in_my_own_words"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="#7A7979" />
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/in_my_own_words"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="@string/name"/>
+
+                <TextView
+                    android:id="@+id/InMyOwnWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text=":"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -1018,7 +1027,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/location_country"
+                    android:id="@+id/locationcountry"
                     android:layout_width="113dp"
                     android:layout_height="match_parent"
                     android:textSize="14sp"
@@ -1151,7 +1160,7 @@
                     android:textColor="@color/black"
                     android:text="@string/family_values"/>
                 <TextView
-                    android:id="@+id/family_values"
+                    android:id="@+id/familyValues"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1172,7 +1181,7 @@
                     android:textColor="@color/black"
                     android:text="@string/family_type"/>
                 <TextView
-                    android:id="@+id/family_type"
+                    android:id="@+id/familyType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1193,7 +1202,7 @@
                     android:textColor="@color/black"
                     android:text="@string/family_status"/>
                 <TextView
-                    android:id="@+id/family_status"
+                    android:id="@+id/familyStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1214,7 +1223,7 @@
                     android:textColor="@color/black"
                     android:text="@string/fathers_occupation"/>
                 <TextView
-                    android:id="@+id/fathers_occupation"
+                    android:id="@+id/fathersOccupation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1236,7 +1245,7 @@
                     android:text="@string/mothers_occupation"/>
 
                 <TextView
-                    android:id="@+id/mothers_occupation"
+                    android:id="@+id/mothersOccupation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -1257,7 +1266,7 @@
                     android:textColor="@color/black"
                     android:text="@string/brothers"/>
                 <TextView
-                    android:id="@+id/brothers"
+                    android:id="@+id/Brothers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1278,7 +1287,7 @@
                     android:textColor="@color/black"
                     android:text="@string/brothers_married"/>
                 <TextView
-                    android:id="@+id/brothers_married"
+                    android:id="@+id/brothersMarried"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1299,7 +1308,7 @@
                     android:textColor="@color/black"
                     android:text="@string/brothers_married"/>
                 <TextView
-                    android:id="@+id/sisters"
+                    android:id="@+id/Sisters"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1320,7 +1329,7 @@
                     android:textColor="@color/black"
                     android:text="@string/sisters_married"/>
                 <TextView
-                    android:id="@+id/sisters_married"
+                    android:id="@+id/sistersMarried"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1341,7 +1350,7 @@
                     android:textColor="@color/black"
                     android:text="@string/ancestral_origin"/>
                 <TextView
-                    android:id="@+id/ancestral_origin"
+                    android:id="@+id/ancestralOrigin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"

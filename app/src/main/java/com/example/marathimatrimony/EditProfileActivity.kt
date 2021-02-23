@@ -17,6 +17,8 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var userID: String
 
     //   Basic Details
+    var InMyOwnWord: TextView? = null
+
     var ProfileCreatedFor: TextView? = null
     var Name: TextView? = null
     var Age: TextView? = null
@@ -45,6 +47,23 @@ class EditProfileActivity : AppCompatActivity() {
     var EmployedIn:TextView? = null
     var AnnualIncome:TextView? = null
 
+    var Country: TextView? = null
+    var State: TextView? = null
+    var City: TextView? = null
+    var Citizenship: TextView? = null
+
+    var FamilyValues: TextView? = null
+    var familyType: TextView? = null
+    var familyStatus: TextView? = null
+    var fathersOccupation: TextView? = null
+    var mothersOccupation: TextView? = null
+    var Brothers: TextView? = null
+    var brothersMarried: TextView? = null
+    var Sisters: TextView? = null
+    var sistersMarried: TextView? = null
+    var ancestralOrigin: TextView? = null
+
+
     lateinit var in_my_own_words_card_view: LinearLayout
     lateinit var basic_details_card_view: LinearLayout
     lateinit var religious_information_card_view: LinearLayout
@@ -67,6 +86,9 @@ class EditProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
         //   Basic Details
+
+        InMyOwnWord = findViewById(R.id.InMyOwnWords)
+
         ProfileCreatedFor = findViewById(R.id.ProfileCreatedFor)
         Name = findViewById(R.id.Name)
         Age = findViewById(R.id.Age)
@@ -93,6 +115,22 @@ class EditProfileActivity : AppCompatActivity() {
         EmployedIn= findViewById(R.id.EmployedIn)
         AnnualIncome= findViewById(R.id.AnnualIncome)
 
+        Country= findViewById(R.id.country)
+        State= findViewById(R.id.state)
+        City= findViewById(R.id.city)
+        Citizenship= findViewById(R.id.citizenship)
+
+        FamilyValues= findViewById(R.id.familyValues)
+        familyType= findViewById(R.id.familyType)
+        familyStatus= findViewById(R.id.familyStatus)
+        fathersOccupation= findViewById(R.id.fathersOccupation)
+        mothersOccupation= findViewById(R.id.mothersOccupation)
+        Brothers= findViewById(R.id.Brothers)
+        brothersMarried= findViewById(R.id.brothersMarried)
+        Sisters= findViewById(R.id.Sisters)
+        sistersMarried= findViewById(R.id.sistersMarried)
+        ancestralOrigin= findViewById(R.id.ancestralOrigin)
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         userID = auth.currentUser!!.uid
@@ -115,9 +153,12 @@ class EditProfileActivity : AppCompatActivity() {
         location_preferences_card_view = findViewById(R.id.location_preferences_card_view)
         what_i_am_looking_for_card_view = findViewById(R.id.what_i_am_looking_for_card_view)
 
+        inMyOwnWords()
         basicDetails()
         religiousInformation()
         professionalnformation()
+        location()
+        familyDetails()
 
 
 
@@ -193,6 +234,21 @@ class EditProfileActivity : AppCompatActivity() {
 
     }
 
+    private fun inMyOwnWords() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+
+                    InMyOwnWord!!.text = snapshot.getString("inMyOwnWords")
+
+                }
+            }
+        }
+    }
+
+
     private fun basicDetails() {
         docRef.addSnapshotListener { snapshot, e ->
             if (e != null) {
@@ -249,5 +305,42 @@ class EditProfileActivity : AppCompatActivity() {
             }
         }
     }
+    private fun location() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    Country!!.text = snapshot.getString("countryLivingIn")
+                    State!!.text = snapshot.getString("residingState")
+                    City!!.text = snapshot.getString("residingCity")
+                    Citizenship!!.text = snapshot.getString("citizenship")
+
+                }
+            }
+        }
+    }
+    private fun familyDetails() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    FamilyValues!!.text = snapshot.getString("familyValues")
+                    familyType!!.text = snapshot.getString("familyType")
+                    familyStatus!!.text = snapshot.getString("familyStatus")
+                    fathersOccupation!!.text = snapshot.getString("fathersOccupation")
+                    mothersOccupation!!.text = snapshot.getString("mothersOccupation")
+                    Brothers!!.text = snapshot.getString("brothers")
+                    brothersMarried!!.text = snapshot.getString("brothersMarried")
+                    Sisters!!.text = snapshot.getString("sisters")
+                    sistersMarried!!.text = snapshot.getString("sistersMarried")
+                    ancestralOrigin!!.text = snapshot.getString("ancestralOrigin")
+
+                }
+            }
+        }
+    }
+
 
 }
