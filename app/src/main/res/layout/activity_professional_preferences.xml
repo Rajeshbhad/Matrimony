@@ -12,7 +12,6 @@
         android:padding="10dp"
         android:gravity="center">
         <TextView
-            android:id="@+id/RELIGIOUSPREFERENCES_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PROFESSIONAL PREFERENCES"
@@ -20,69 +19,93 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:textStyle="bold" />
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Education"/>
-        <Spinner
-            android:id="@+id/editEducation"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="EDUCATION"/>
+            <TextView
+                android:id="@+id/editEducation"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Education" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="EMPLOYED IN"/>
+            <TextView
+                android:id="@+id/editEmployedIn"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="OCCUPATION" />
+            <TextView
+                android:id="@+id/editOccupation"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Employed In"/>
-        <Spinner
-            android:id="@+id/editEmployedIn"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Employed In" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Occupation"/>
-        <Spinner
-            android:id="@+id/editOccupation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Occupation" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Annual Income"/>
-        <Spinner
-            android:id="@+id/editAnnualIncome"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Annual Income" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="ANNUAL INCOME" />
+            <TextView
+                android:id="@+id/editAnnualIncome"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

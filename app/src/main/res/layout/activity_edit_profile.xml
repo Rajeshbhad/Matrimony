@@ -1744,7 +1744,7 @@
                     android:textColor="@color/black"
                     android:text="@string/age"/>
                 <TextView
-                    android:id="@+id/bsAge"
+                    android:id="@+id/bPAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1767,7 +1767,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/bsHeight"
+                    android:id="@+id/bPHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -1789,7 +1789,7 @@
                     android:text="@string/marital_status"/>
 
                 <TextView
-                    android:id="@+id/bsMaritalStatus"
+                    android:id="@+id/bPMaritalStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -1811,7 +1811,7 @@
                     android:text="@string/marital_status"/>
 
                 <TextView
-                    android:id="@+id/bsHave_children"
+                    android:id="@+id/bPHaveChildren"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -1833,7 +1833,7 @@
                     android:text="@string/physical_status"/>
 
                 <TextView
-                    android:id="@+id/physical_status"
+                    android:id="@+id/bPPhysicalStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -1855,7 +1855,7 @@
                     android:text="@string/eating_habits"/>
 
                 <TextView
-                    android:id="@+id/bseatingHabits"
+                    android:id="@+id/bPEatingHabits"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
@@ -1876,7 +1876,7 @@
                     android:textColor="@color/black"
                     android:text="@string/drinking_habits"/>
                 <TextView
-                    android:id="@+id/bssmoking_habits"
+                    android:id="@+id/bPSmokingHabits"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1898,7 +1898,7 @@
                     android:text="@string/smoking_habits"/>
 
                 <TextView
-                    android:id="@+id/bsdrinking_habits"
+                    android:id="@+id/bPDrinkingHabits"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"

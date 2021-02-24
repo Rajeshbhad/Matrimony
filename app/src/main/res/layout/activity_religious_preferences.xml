@@ -12,7 +12,7 @@
         android:padding="10dp"
         android:gravity="center">
         <TextView
-            android:id="@+id/RELIGIOUSPREFERENCES_txt"
+            android:id="@+id/ReligiousPreferences"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RELIGIOUS PREFERENCES"
@@ -49,9 +49,14 @@
                 android:padding="3dp"
                 android:layout_marginBottom="5dp"
                 android:text="MOTHER TONGUE"/>
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            <TextView
                 android:id="@+id/editMotherTongue"
                 android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
         </LinearLayout>
@@ -66,9 +71,14 @@
                 android:padding="3dp"
                 android:layout_marginBottom="5dp"
                 android:text="CASTE"/>
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            <TextView
                 android:id="@+id/editCaste"
                 android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
         </LinearLayout>
@@ -82,10 +92,15 @@
                 android:textColor="@color/black"
                 android:padding="3dp"
                 android:layout_marginBottom="5dp"
-                android:text="SUBCASTE"/>
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:text="SUB CASTE"/>
+            <TextView
                 android:id="@+id/editSubCaste"
                 android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
         </LinearLayout>
@@ -100,9 +115,14 @@
                 android:padding="3dp"
                 android:layout_marginBottom="5dp"
                 android:text="STAR"/>
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            <TextView
                 android:id="@+id/editStar"
                 android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
         </LinearLayout>

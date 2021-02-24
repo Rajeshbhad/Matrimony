@@ -87,7 +87,6 @@ class BasicDetails : AppCompatActivity() {
         }
         val editProfileCreatedForArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
         val arrayAdapter1= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editProfileCreatedForArray)
-
         editProfileCreatedFor.adapter=arrayAdapter1
         editProfileCreatedFor.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

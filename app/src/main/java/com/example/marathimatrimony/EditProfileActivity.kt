@@ -73,6 +73,16 @@ class EditProfileActivity : AppCompatActivity() {
     var dressStyle: TextView? = null
     var spokenLanguages: TextView? = null
 
+    var BPAge: TextView? = null
+    var BPHeight: TextView? = null
+    var BPMaritalStatus: TextView? = null
+    var BPHaveChildren: TextView? = null
+    var BPPhysicalStatus: TextView? = null
+    var BPEatingHabits: TextView? = null
+    var BPDrinkingHabits: TextView? = null
+    var BPSmokingHabits: TextView? = null
+
+
     lateinit var in_my_own_words_card_view: LinearLayout
     lateinit var basic_details_card_view: LinearLayout
     lateinit var religious_information_card_view: LinearLayout
@@ -150,6 +160,15 @@ class EditProfileActivity : AppCompatActivity() {
         dressStyle= findViewById(R.id.dressStyle)
         spokenLanguages= findViewById(R.id.spokenLanguages)
 
+        BPAge= findViewById(R.id.bPAge)
+        BPHeight= findViewById(R.id.bPHeight)
+        BPMaritalStatus= findViewById(R.id.bPMaritalStatus)
+        BPHaveChildren= findViewById(R.id.bPHaveChildren)
+        BPPhysicalStatus= findViewById(R.id.bPPhysicalStatus)
+        BPEatingHabits= findViewById(R.id.bPEatingHabits)
+        BPDrinkingHabits= findViewById(R.id.bPDrinkingHabits)
+        BPSmokingHabits= findViewById(R.id.bPSmokingHabits)
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         userID = auth.currentUser!!.uid
@@ -179,6 +198,7 @@ class EditProfileActivity : AppCompatActivity() {
         location()
         familyDetails()
         hobbiesAndInterests()
+        basicPreferences()
 
 
 
@@ -382,5 +402,22 @@ class EditProfileActivity : AppCompatActivity() {
         }
     }
 
-
+    private fun basicPreferences() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    BPAge!!.text = snapshot.getString("bPAge")
+                    BPHeight!!.text = snapshot.getString("bPHeight")
+                    BPMaritalStatus!!.text = snapshot.getString("bPMaritalStatus")
+                    BPHaveChildren!!.text = snapshot.getString("bPHaveChildren")
+                    BPPhysicalStatus!!.text = snapshot.getString("bPPhysicalStatus")
+                    BPEatingHabits!!.text = snapshot.getString("bPEatingHabits")
+                    BPDrinkingHabits!!.text = snapshot.getString("bPDrinkingHabits")
+                    BPSmokingHabits!!.text = snapshot.getString("bPSmokingHabits")
+                }
+            }
+        }
+    }
 }
