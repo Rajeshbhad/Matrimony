@@ -2135,8 +2135,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:layout_marginStart="4dp"
-                    android:textColor="@color/black"
-                    android:text="@string/education"/>
+                    android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

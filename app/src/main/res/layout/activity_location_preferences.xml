@@ -31,7 +31,51 @@
                 android:layout_marginBottom="5dp"
                 android:text="Country Living in"/>
             <TextView
-                android:id="@+id/editCountryLivingIn"
+                android:id="@+id/lPEditCountryLivingIn"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="Residing State"/>
+            <TextView
+                android:id="@+id/lPEditResidingState"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:hint="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="Residing City"/>
+            <TextView
+                android:id="@+id/lPEditResidingCity"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"

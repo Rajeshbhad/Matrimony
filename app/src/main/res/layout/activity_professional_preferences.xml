@@ -31,7 +31,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="EDUCATION"/>
             <TextView
-                android:id="@+id/editEducation"
+                android:id="@+id/pPEditEducation"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -53,7 +53,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="EMPLOYED IN"/>
             <TextView
-                android:id="@+id/editEmployedIn"
+                android:id="@+id/pPEditEmployedIn"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -75,7 +75,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="OCCUPATION" />
             <TextView
-                android:id="@+id/editOccupation"
+                android:id="@+id/pPEditOccupation"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -97,7 +97,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="ANNUAL INCOME" />
             <TextView
-                android:id="@+id/editAnnualIncome"
+                android:id="@+id/pPEditAnnualIncome"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"

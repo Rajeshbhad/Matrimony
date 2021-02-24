@@ -84,13 +84,11 @@ class RegisterActivity : AppCompatActivity(){
         radioButton1.setOnClickListener {
             val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
             radioButton1 = findViewById(intSelectButton)
-            Toast.makeText(this, radioButton1.text, Toast.LENGTH_SHORT).show()
             gender=radioButton1.text.toString()
         }
         radioButton2.setOnClickListener {
             val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
             radioButton2 = findViewById(intSelectButton)
-            Toast.makeText(this, radioButton2.text, Toast.LENGTH_SHORT).show()
             gender=radioButton2.text.toString()
 
         }

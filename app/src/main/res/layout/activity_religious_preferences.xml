@@ -33,7 +33,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="RELIGION"/>
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/editReligion"
+                android:id="@+id/pPEditReligion"
                 android:background="@drawable/shape7"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
@@ -50,7 +50,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="MOTHER TONGUE"/>
             <TextView
-                android:id="@+id/editMotherTongue"
+                android:id="@+id/pPEditMotherTongue"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -72,7 +72,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="CASTE"/>
             <TextView
-                android:id="@+id/editCaste"
+                android:id="@+id/pPEditCaste"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -94,7 +94,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="SUB CASTE"/>
             <TextView
-                android:id="@+id/editSubCaste"
+                android:id="@+id/pPEditSubCaste"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -116,7 +116,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="STAR"/>
             <TextView
-                android:id="@+id/editStar"
+                android:id="@+id/pPEditStar"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
                 android:hint="--Select--"
@@ -138,7 +138,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="DOSH"/>
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/editDosh"
+                android:id="@+id/pPEditDosh"
                 android:background="@drawable/shape7"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
