@@ -1441,6 +1441,27 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/hobbies"
+                    android:layout_width="113dp"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="Interest"/>
+                <TextView
+                    android:id="@+id/Hobbies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/black"
+                    android:text=":"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
                     android:id="@+id/hobbies_and_interest_Interest"
                     android:layout_width="113dp"
                     android:layout_height="match_parent"
@@ -1575,7 +1596,7 @@
                     android:textColor="@color/black"
                     android:text="Dress Style"/>
                 <TextView
-                    android:id="@+id/dress_style"
+                    android:id="@+id/dressStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -1596,7 +1617,7 @@
                     android:textColor="@color/black"
                     android:text="language Know"/>
                 <TextView
-                    android:id="@+id/language_known"
+                    android:id="@+id/spokenLanguages"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"

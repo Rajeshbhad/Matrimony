@@ -31,148 +31,196 @@
                 android:textColor="@color/black"
                 android:padding="3dp"
                 android:layout_marginBottom="5dp"
-                android:text="PROFILE CREATED FOR"/>
+                android:text="HOBBIES"/>
             <TextView
                 android:id="@+id/editHobbies"
                 android:background="@drawable/shape7"
                 android:drawableEnd="@drawable/ic_drop_down_arrow"
-                android:text="hello"
+                android:text="--Select--"
                 android:textSize="18sp"
-                android:padding="13dp"
+                android:padding="12dp"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
         </LinearLayout>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Interests"/>
-        <Spinner
-            android:id="@+id/editInterests"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="INTERESTS"/>
+            <TextView
+                android:id="@+id/editInterests"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Hobbies" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAVORITE MUSIC"/>
+            <TextView
+                android:id="@+id/editFavouriteMusic"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAVORITE READS"/>
+            <TextView
+                android:id="@+id/editFavouriteReads"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Favourite Music"/>
-        <Spinner
-            android:id="@+id/editFavouriteMusic"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="PREFERRED MOVIES"/>
+            <TextView
+                android:id="@+id/editPreferredMovies"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Favourite Music" />
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="SPORTS / FITNESS ACTIVITIES"/>
+            <TextView
+                android:id="@+id/editSportsAndFitnessActivities"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="FAVORITE CUISINE"/>
+            <TextView
+                android:id="@+id/editFavouriteCuisine"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Favourite Reads"/>
-        <Spinner
-            android:id="@+id/editFavouriteReads"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="PREFERRED DRESS STYLE"/>
+            <TextView
+                android:id="@+id/editPreferredDressStyle"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Favourite Reads" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Preferred Movies"/>
-        <Spinner
-            android:id="@+id/editPreferredMovies"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Preferred Movies" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Sports/Fitness Activities"/>
-        <Spinner
-            android:id="@+id/editSportsAndFitnessActivities"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Sports/Fitness Activities" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Favourite Cuisine"/>
-        <Spinner
-            android:id="@+id/editFavouriteCuisine"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Favourite Cuisine" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Preferred Dress Style"/>
-        <Spinner
-            android:id="@+id/editPreferredDressStyle"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Sports/Favourite Cuisine" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
-            android:text="Spoken Languages"/>
-        <Spinner
-            android:id="@+id/editSpokenLanguages"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:entries="@array/arrayProfileCreatedFor"
-            android:text="Spoken Languages" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BAB7B7" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="SPOKEN LANGUAGES"/>
+            <TextView
+                android:id="@+id/editSpokenLanguages"
+                android:background="@drawable/shape7"
+                android:drawableEnd="@drawable/ic_drop_down_arrow"
+                android:text="--Select--"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
         <Button
-            android:id="@+id/HobbiesAndInterestSaveBtn"
+            android:id="@+id/hobbiesAndInterestSaveBtn"
             android:layout_width="250dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape6"

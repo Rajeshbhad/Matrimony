@@ -63,6 +63,15 @@ class EditProfileActivity : AppCompatActivity() {
     var sistersMarried: TextView? = null
     var ancestralOrigin: TextView? = null
 
+    var Hobbies: TextView? = null
+    var Interest: TextView? = null
+    var Music: TextView? = null
+    var Reads: TextView? = null
+    var Movies: TextView? = null
+    var Sports: TextView? = null
+    var Cuisines: TextView? = null
+    var dressStyle: TextView? = null
+    var spokenLanguages: TextView? = null
 
     lateinit var in_my_own_words_card_view: LinearLayout
     lateinit var basic_details_card_view: LinearLayout
@@ -131,6 +140,16 @@ class EditProfileActivity : AppCompatActivity() {
         sistersMarried= findViewById(R.id.sistersMarried)
         ancestralOrigin= findViewById(R.id.ancestralOrigin)
 
+        Hobbies= findViewById(R.id.Hobbies)
+        Interest= findViewById(R.id.Interest)
+        Music= findViewById(R.id.Music)
+        Reads= findViewById(R.id.Reads)
+        Movies= findViewById(R.id.Movies)
+        Sports= findViewById(R.id.Sports)
+        Cuisines= findViewById(R.id.Cuisines)
+        dressStyle= findViewById(R.id.dressStyle)
+        spokenLanguages= findViewById(R.id.spokenLanguages)
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         userID = auth.currentUser!!.uid
@@ -159,6 +178,7 @@ class EditProfileActivity : AppCompatActivity() {
         professionalnformation()
         location()
         familyDetails()
+        hobbiesAndInterests()
 
 
 
@@ -336,6 +356,26 @@ class EditProfileActivity : AppCompatActivity() {
                     Sisters!!.text = snapshot.getString("sisters")
                     sistersMarried!!.text = snapshot.getString("sistersMarried")
                     ancestralOrigin!!.text = snapshot.getString("ancestralOrigin")
+
+                }
+            }
+        }
+    }
+    private fun hobbiesAndInterests() {
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+                    Hobbies!!.text = snapshot.getString("hobbies")
+                    Interest!!.text = snapshot.getString("interests")
+                    Music!!.text = snapshot.getString("favouriteMusic")
+                    Reads!!.text = snapshot.getString("favouriteReads")
+                    Movies!!.text = snapshot.getString("preferredMovies")
+                    Sports!!.text = snapshot.getString("sportsAndFitnessActivities")
+                    Cuisines!!.text = snapshot.getString("favouriteCuisine")
+                    dressStyle!!.text = snapshot.getString("preferredDressStyle")
+                    spokenLanguages!!.text = snapshot.getString("spokenLanguages")
 
                 }
             }
