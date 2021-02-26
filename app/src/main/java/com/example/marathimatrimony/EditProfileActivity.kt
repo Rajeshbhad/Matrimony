@@ -2,12 +2,16 @@ package com.example.marathimatrimony
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
 
 class EditProfileActivity : AppCompatActivity() {
 
@@ -15,6 +19,10 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
     private lateinit var docRef: DocumentReference
     private lateinit var userID: String
+    private lateinit var storageReference: StorageReference
+//    lateinit var imageUri: Uri
+    lateinit var profilePhoto: ImageView
+
 
     //   Basic Details
     var InMyOwnWord: TextView? = null
@@ -101,6 +109,8 @@ class EditProfileActivity : AppCompatActivity() {
     lateinit var add_photos: LinearLayout
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
@@ -169,10 +179,14 @@ class EditProfileActivity : AppCompatActivity() {
         BPDrinkingHabits= findViewById(R.id.bPDrinkingHabits)
         BPSmokingHabits= findViewById(R.id.bPSmokingHabits)
 
+        profilePhoto= findViewById(R.id.profilePhoto)
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         userID = auth.currentUser!!.uid
         docRef = db.collection("Users").document(userID)
+        storageReference= FirebaseStorage.getInstance().reference
+
 
         add_contacts = findViewById(R.id.add_contacts)
         add_horoscope = findViewById(R.id.add_horoscope)
@@ -194,7 +208,7 @@ class EditProfileActivity : AppCompatActivity() {
         inMyOwnWords()
         basicDetails()
         religiousInformation()
-        professionalnformation()
+        professionalInformation()
         location()
         familyDetails()
         hobbiesAndInterests()
@@ -214,6 +228,7 @@ class EditProfileActivity : AppCompatActivity() {
         add_photos.setOnClickListener {
             val intent = Intent(this, AddPhotos::class.java)
             startActivity(intent)
+
         }
         in_my_own_words_card_view.setOnClickListener {
             val intent = Intent(this, InMyOwnWords::class.java)
@@ -271,8 +286,24 @@ class EditProfileActivity : AppCompatActivity() {
             val intent = Intent(this, WhatIAmLookingFor::class.java)
             startActivity(intent)
         }
-
+        getUserInfo()
     }
+    private fun getUserInfo() {
+
+        docRef.addSnapshotListener { snapshot, e ->
+            if (e != null) {
+                return@addSnapshotListener
+            } else {
+                if (snapshot != null && snapshot.exists()) {
+
+                    val image: String? =snapshot.getString("imageUrl")
+                    Picasso.get().load(image).into(profilePhoto)
+                }
+            }
+        }
+    }
+
+
 
     private fun inMyOwnWords() {
         docRef.addSnapshotListener { snapshot, e ->
@@ -329,7 +360,7 @@ class EditProfileActivity : AppCompatActivity() {
             }
         }
     }
-    private fun professionalnformation() {
+    private fun professionalInformation() {
         docRef.addSnapshotListener { snapshot, e ->
             if (e != null) {
                 return@addSnapshotListener

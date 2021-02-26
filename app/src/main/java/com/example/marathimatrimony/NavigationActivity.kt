@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,9 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
 
 class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener
 {
@@ -39,6 +43,10 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
     private lateinit var view: View
     private lateinit var userName: TextView
     private lateinit var emailAddress:TextView
+    lateinit var profilePhoto: ImageView
+    private lateinit var storageReference: StorageReference
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +58,14 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
         view=navigationView.getHeaderView(0)
         userName=view.findViewById(R.id.userName)
         emailAddress=view.findViewById(R.id.emailAddress)
+        profilePhoto=view.findViewById(R.id.profilePhoto)
 
         auth= FirebaseAuth.getInstance()
         db= FirebaseFirestore.getInstance()
         userID= auth.currentUser!!.uid
         docRef = db.collection("Users").document(userID)
+        storageReference= FirebaseStorage.getInstance().reference
+
 
 
 
@@ -131,7 +142,8 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
                 if (snapshot != null && snapshot.exists()) {
                      userName.text = snapshot.getString("name")
                      emailAddress.text=snapshot.getString("email")
-
+                     val image: String? =snapshot.getString("imageUrl")
+                     Picasso.get().load(image).into(profilePhoto)
                 } else {
                 }
             }
