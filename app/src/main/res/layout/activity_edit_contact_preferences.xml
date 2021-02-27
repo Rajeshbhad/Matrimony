@@ -1,5 +1,5 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,32 +32,33 @@
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
+            android:layout_marginBottom="5dp"
             android:textColor="#434040"
             android:text="Whom to Contact"/>
-        <EditText
-            android:id="@+id/whom_to_contact_edit_text"
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/editWhomToContact"
+            android:background="@drawable/shape7"
+            android:drawableEnd="@drawable/ic_drop_down_arrow"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:text="Not Specified"/>
+            android:layout_height="50dp"/>
         <TextView
             android:id="@+id/contact_person_name_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
+            android:layout_marginBottom="5dp"
             android:textColor="#434040"
             android:text="Contact Person Name"/>
         <EditText
-            android:id="@+id/contact_person_name_edit_text"
+            android:id="@+id/editContactPersonName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:text="Not Specified"/>
+            android:layout_height="50dp"
+            android:ems="10"
+            android:padding="8dp"
+            android:hint="Enter Contact Person Name"
+            android:background="@drawable/shape7"
+            android:inputType="textPersonName" />
         <TextView
             android:id="@+id/available_time_to_call_textView"
             android:layout_width="match_parent"
@@ -67,29 +68,41 @@
             android:textColor="#434040"
             android:text="Available Time to Call"/>
         <EditText
-            android:id="@+id/available_time_to_call_edit_text"
+            android:id="@+id/editAvailableTimeToCalled"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:text="Not Specified"/>
+            android:layout_height="50dp"
+            android:ems="10"
+            android:padding="8dp"
+           android:hint="Enter Available Time to Call"
+            android:background="@drawable/shape7"
+            android:inputType="time" />
         <TextView
-            android:id="@+id/comments_textView"
+            android:id="@+id/Comment_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="#434040"
-            android:text="Available Time to Call"/>
+            android:text="Comment"/>
         <EditText
-            android:id="@+id/comments_edit_text"
+            android:id="@+id/editComments"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
+            android:inputType="text|textMultiLine"
             android:textColor="@color/black"
-            android:text="Not Specified"/>
+            android:hint="Comment"/>
+
+        <Button
+            android:id="@+id/editContactPreferencesSaveBtn"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape6"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="SAVE" />
     </LinearLayout>
 
 </ScrollView>

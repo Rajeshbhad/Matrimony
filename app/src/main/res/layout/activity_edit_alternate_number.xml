@@ -15,22 +15,22 @@
             android:id="@+id/txt_Info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alternate Contact Details"
+            android:text="Parent Contact Number"
             android:textColor="#4E4C4C"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="20dp"
             android:textSize="15sp"/>
         <EditText
-            android:id="@+id/editReligion"
+            android:id="@+id/editParentContactNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:hint="Please Enter new number"
+            android:hint="Enter Parent Contact Number"
             android:textSize="17sp"
-            android:inputType="textCapSentences"
+            android:inputType="number"
             android:layout_margin="2dp" />
         <Button
-            android:id="@+id/EditAlternateNumberSaveBtn"
+            android:id="@+id/alternateNumberSaveBtn"
             android:layout_width="250dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape6"

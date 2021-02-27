@@ -20,7 +20,7 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var docRef: DocumentReference
     private lateinit var userID: String
     private lateinit var storageReference: StorageReference
-//    lateinit var imageUri: Uri
+
     lateinit var profilePhoto: ImageView
 
 

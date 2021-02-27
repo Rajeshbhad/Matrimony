@@ -35,17 +35,17 @@
                 app:srcCompat="@drawable/ic_menu_edit_profile"/>
         </LinearLayout>
         <TextView
-            android:id="@+id/phone_number"
+            android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:text="rejeshbhad85@gamil.com"/>
+            android:text=""/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="#7A7979" />
         <LinearLayout
             android:id="@+id/phone_number_card_view"
@@ -70,17 +70,17 @@
                 app:srcCompat="@drawable/ic_menu_edit_profile"/>
         </LinearLayout>
         <TextView
-        android:id="@+id/phone_number_textView"
+        android:id="@+id/phoneNumber"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"
-        android:text="8605872973"/>
+        android:text=""/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="#7A7979" />
         <LinearLayout
             android:id="@+id/alternate_phone_card_view"
@@ -105,17 +105,17 @@
                 app:srcCompat="@drawable/ic_menu_edit_profile"/>
         </LinearLayout>
         <TextView
-            android:id="@+id/alternate_phone_textView"
+            android:id="@+id/alternateContactNumber"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:text="8605872973"/>
+            android:text=""/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="#7A7979" />
         <LinearLayout
             android:id="@+id/contact_preferences_card_view"
@@ -146,7 +146,20 @@
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
+            android:text="Whom To Contact"/>
+        <TextView
+            android:id="@+id/whomToContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
             android:text="Not Specified"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#7A7979" />
         <TextView
             android:id="@+id/contact_person_name_textView"
             android:layout_width="match_parent"
@@ -154,7 +167,20 @@
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
+            android:text="Contact Person Name"/>
+        <TextView
+            android:id="@+id/contactPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
             android:text="Not Specified"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#7A7979" />
         <TextView
             android:id="@+id/available_time_to_call_textView"
             android:layout_width="match_parent"
@@ -162,7 +188,20 @@
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
+            android:text="Available Time To Call"/>
+        <TextView
+            android:id="@+id/availableTimeToCall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
             android:text="Not Specified"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#7A7979" />
         <TextView
             android:id="@+id/comments_textView"
             android:layout_width="match_parent"
@@ -170,7 +209,20 @@
             android:layout_marginTop="10dp"
             android:textSize="15sp"
             android:textColor="@color/black"
+            android:text="Comments"/>
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
             android:text="Not Specified"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#7A7979" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

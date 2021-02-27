@@ -21,9 +21,10 @@
             android:layout_marginBottom="20dp"
             android:textSize="15sp"/>
         <TextView
+            android:id="@+id/currentPhoneNO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="8605872973"
+            android:text=""
             android:textColor="@color/black"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="20dp"
@@ -43,7 +44,7 @@
             android:layout_marginTop="2dp"
             android:hint="Please Enter new number"
             android:textSize="17sp"
-            android:inputType="textCapSentences"
+            android:inputType="number"
             android:layout_margin="2dp" />
         <Button
             android:id="@+id/WhatIAmLookingForBtn"

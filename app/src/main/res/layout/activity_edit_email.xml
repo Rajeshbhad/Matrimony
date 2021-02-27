@@ -17,44 +17,45 @@
             android:layout_height="wrap_content"
             android:text="Current E-Mail address"
             android:textColor="#4E4C4C"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="6dp"
             android:layout_marginBottom="20dp"
             android:textSize="15sp"/>
         <TextView
+            android:id="@+id/currentMail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="rajeshbhad85@gamil.com"
+            android:text=""
             android:textColor="@color/black"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="6dp"
             android:layout_marginBottom="20dp"
             android:textSize="15sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your new email address"
+            android:text="Enter New Email Address"
             android:textColor="#4E4C4C"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="6dp"
             android:textSize="15sp">
         </TextView>
         <EditText
-            android:id="@+id/editReligion"
+            android:id="@+id/editEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:hint="Please Enter Partner Description"
+            android:hint="Enter your new email address"
             android:textSize="17sp"
             android:inputType="textCapSentences"
             android:layout_margin="2dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Primary Email Address is used fr all Comminacation"
+            android:text="Primary Email Address is used for all Communication"
             android:textColor="#4E4C4C"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:textSize="12sp"/>
         <Button
-            android:id="@+id/EditEmailSaveBtn"
+            android:id="@+id/editEmailSaveBtn"
             android:layout_width="250dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape6"
