@@ -67,7 +67,7 @@ class ProfessionalInformation : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editEmployedInArray= arrayOf( "--Select--","1","2","3","4","5","6")
+        val editEmployedInArray= arrayOf("--Select--", "Any","Government/PSU " ,"Defence","Private","Business","Self Employed","Not Working")
         val arrayAdapter2= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editEmployedInArray)
         editEmployedIn.adapter=arrayAdapter2
         editEmployedIn.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -81,7 +81,7 @@ class ProfessionalInformation : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editOccupationArray= arrayOf( "--Select--","1","2","3","4","5","6")
+        val editOccupationArray= arrayOf( "--select--", "Any","Administration" ,"Agriculture","Airline","Agriculture & Design","Banking & Finance","Beauty & Fashion","Bpo & Customer Service","Civil Services","Corporate Professionals","Defence","Education & Training","Engineering","Hospitality","It & Software","Legal","Law Enforcement","Medical & Healhcare","Media & Entertainment","Merchant Navy","Scientist ","Top Management","Others")
         val arrayAdapter3= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editOccupationArray)
         editOccupation.adapter=arrayAdapter3
         editOccupation.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -95,7 +95,10 @@ class ProfessionalInformation : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editCurrencyTypeArray= arrayOf( "--Select--","1","2","3","4","5","6")
+        val editCurrencyTypeArray= arrayOf("--Select--", "Less than Rs.50 Thousand "," Rs.50 Thousand " ,"Rs.1 Lakh","Rs.2 Lakhs","Rs.3 Lakhs","Rs.4 Lakhs",
+            "Rs.5Lakhs","Rs.6 Lakhs","Rs.7 Lakhs","Rs.8 Lakhs","Rs.9 Lakhs","Rs.10 Lakhs","Rs.12 Lakhs","Rs.14 Lakhs","Rs.16 Lakhs","Rs.18 Lakhs","Rs.20Lakhs",
+            "Rs.25 Lakhs","Rs.30 Lakhs","Rs.35 Lakhs","Rs.40 Lakhs","Rs.45 Lakhs","Rs.50 Lakhs","Rs.60 Lakhs","Rs.70 Lakh","Rs.80 Lakhs","Rs.90 Lakhs",
+            "Rs.1 crore","Rs.1 crore and Above")
         val arrayAdapter4= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editCurrencyTypeArray)
         editCurrencyType.adapter=arrayAdapter4
         editCurrencyType.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -109,7 +112,10 @@ class ProfessionalInformation : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editEnterAnnualIncomeArray= arrayOf( "--Select--","1","2","3","4","5","6")
+        val editEnterAnnualIncomeArray= arrayOf( "--Select--", "Less than Rs.50 Thousand "," Rs.50 Thousand " ,"Rs.1 Lakh","Rs.2 Lakhs","Rs.3 Lakhs","Rs.4 Lakhs",
+            "Rs.5Lakhs","Rs.6 Lakhs","Rs.7 Lakhs","Rs.8 Lakhs","Rs.9 Lakhs","Rs.10 Lakhs","Rs.12 Lakhs","Rs.14 Lakhs","Rs.16 Lakhs","Rs.18 Lakhs","Rs.20Lakhs",
+            "Rs.25 Lakhs","Rs.30 Lakhs","Rs.35 Lakhs","Rs.40 Lakhs","Rs.45 Lakhs","Rs.50 Lakhs","Rs.60 Lakhs","Rs.70 Lakh","Rs.80 Lakhs","Rs.90 Lakhs",
+            "Rs.1 crore","Rs.1 crore and Above")
         val arrayAdapter5= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editEnterAnnualIncomeArray)
         editEnterAnnualIncome.adapter=arrayAdapter5
         editEnterAnnualIncome.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{

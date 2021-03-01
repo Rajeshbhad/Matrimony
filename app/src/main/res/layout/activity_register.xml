@@ -121,7 +121,7 @@
                     android:paddingStart="20dp"
                     android:checked="false"
                     android:background="@drawable/shape7"
-                    android:text="Mail" />
+                    android:text="Male" />
 
                 <RadioButton
                     android:id="@+id/radioBtn2"
@@ -131,7 +131,7 @@
                     android:checked="false"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape7"
-                    android:text="Femail" />
+                    android:text="Female" />
 
             </RadioGroup>
         </LinearLayout>
@@ -227,7 +227,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:textColor="@color/black"
-                android:text="EDIT MAIL"/>
+                android:text="EMAIL ID"/>
 
             <EditText
                 android:id="@+id/editEmail"

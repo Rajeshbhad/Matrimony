@@ -85,7 +85,7 @@ class BasicDetails : AppCompatActivity() {
         editDateOfBirth.setOnClickListener {
             DatePickerDialog(this@BasicDetails, dateSetListener, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)).show()
         }
-        val editProfileCreatedForArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editProfileCreatedForArray= arrayOf( "--Select--","My Self","Son","Brother","Relative","Friend")
         val arrayAdapter1= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editProfileCreatedForArray)
         editProfileCreatedFor.adapter=arrayAdapter1
         editProfileCreatedFor.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -99,7 +99,9 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editHeightArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editHeightArray= arrayOf("4 Ft 6 In","4 Ft 7 In","4 Ft 8 In","4 Ft 9 In","4 Ft 10 In","4 Ft 11 In","5 Ft", "5 Ft 1 In","5 Ft 2 In","5 Ft 3 In",
+            "5 Ft 4 In","5 Ft 5 In","5 Ft 6 In","5 Ft 7 In","5 Ft 8 In","5 Ft 9 In","5 Ft 10 In","5 Ft 11 In","6 Ft","6 Ft 1 In","6 Ft 1 In","6 Ft 2 In","6 Ft 3 In"
+            ,"6 Ft 4 In","6 Ft 5 In","6 Ft 6 In","6 Ft 7 In","6 Ft 8 In","6 Ft 9 In","6 Ft 10 In","6 Ft 11 In","7 Ft")
         val arrayAdapter2= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editHeightArray)
         editHeight.adapter=arrayAdapter2
         editHeight.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -114,7 +116,10 @@ class BasicDetails : AppCompatActivity() {
             }
         }
 
-        val editWeightArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editWeightArray= arrayOf( "--Select--", "21 kgs","22 kgs","23 kgs","24 kgs","25 kgs","26 kgs","27 kgs","28 kgs","29 kgs","30 kgs","31 kgs"
+            ,"32 kgs","33 kgs","34kgs","35 kgs", "36 kgs", "37 kgs", "38 kgs", "39 kgs","40 kgs","41 kgs","42 kgs","43 kgs","44 kgs","45 kgs","46 kgs"
+            ,"47 kgs","48 kgs","49kgs","50 kgs","51 kgs","52 kgs","53 kgs","54 kgs","55 kgs","56 kgs","57 kgs","58 kgs","59 kgs","60 kgs","61 kgs","62 kgs"
+            ,"63 kgs", "64 kgs","65kgs","66 kgs","67 kgs","68 kgs","69 kgs","70 kgs")
         val arrayAdapter3= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editWeightArray)
         editWeight.adapter=arrayAdapter3
         editWeight.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -129,7 +134,7 @@ class BasicDetails : AppCompatActivity() {
             }
         }
 
-        val editMaritalStatusArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editMaritalStatusArray= arrayOf("--Select--", "Married","Widower", "Divorced", "Awaiting Divorce")
         val arrayAdapter4= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editMaritalStatusArray)
         editMaritalStatus.adapter=arrayAdapter4
         editMaritalStatus.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -143,7 +148,7 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editBodyTypeArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editBodyTypeArray= arrayOf( "--Select--", "Average","Athletic","Slim","Heavy")
         val arrayAdapter5= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editBodyTypeArray)
         editBodyType.adapter=arrayAdapter5
         editBodyType.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -157,7 +162,12 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editMotherTongueArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editMotherTongueArray= arrayOf( "--Select--", "Marathi","Hindi","Bengali","Telugu","Tamil","Gujarati","Urdu","Bhojpuri","Kannada","Malayalam",
+            "Odia","Punjabi","Rajasthani","Chhattisgarhi","Assamese","Assamese","Maithili","Magadhi/Magahi","Haryanvi","Khortha/Khotta","Marwari"
+            ,"Santali","Kashmiri","Bundeli/Bundel khandi","Malvi","Sadan/Sadri","Mewari","Awadhi","Wagdi","Lamani/Lambadi","Pahari[c]","Bhili/Bhilodi",
+            "Hara/Harauti","Nepali","Gondi","Bagheli/Baghel Khandi","Sambalpuri","Dogri","Garhwali","Nimadi","Surjapuri","Konkani","Kumauni","Kurukh/Oraon",
+            "Tulu","Manipuri","Surgujia","Sindhi","Bagri","Ahirani","Banjari","Brajbhasha","Dhundhari","Bodo/Boro","ojri/Gujjari/Gujar",
+            "Mundari","Garo","Kangri","Khasi","Kachchhi")
         val arrayAdapter6= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editMotherTongueArray)
         editMotherTongue.adapter=arrayAdapter6
         editMotherTongue.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -171,7 +181,7 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editEatingHabitsArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editEatingHabitsArray= arrayOf( "--Select--", "Vegetarian","Non-Vegetarian","Eggetarian")
         val arrayAdapter7= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editEatingHabitsArray)
         editEatingHabits.adapter=arrayAdapter7
         editEatingHabits.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -185,7 +195,7 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editDrinkingHabitsArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editDrinkingHabitsArray= arrayOf( "--Select--", "No","Occasionally","Yes")
         val arrayAdapter8= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editDrinkingHabitsArray)
         editDrinkingHabits.adapter=arrayAdapter8
         editDrinkingHabits.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -199,7 +209,7 @@ class BasicDetails : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?){
             }
         }
-        val editSmokingHabitsArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editSmokingHabitsArray= arrayOf( "--Select--", "No","Occasionally","Yes")
         val arrayAdapter9= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editSmokingHabitsArray)
         editSmokingHabits.adapter=arrayAdapter9
         editSmokingHabits.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{

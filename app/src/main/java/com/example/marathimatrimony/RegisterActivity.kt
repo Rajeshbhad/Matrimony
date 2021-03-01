@@ -106,7 +106,7 @@ class RegisterActivity : AppCompatActivity(){
 
 
 
-        val profileCreatedFor= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val profileCreatedFor= arrayOf( "--Select--","My Self","Son","Brother","Relative","Friend")
         val arrayAdapter1=ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,profileCreatedFor)
         editProfileCreatedFor.adapter=arrayAdapter1
         editProfileCreatedFor.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
@@ -238,7 +238,7 @@ class RegisterActivity : AppCompatActivity(){
         }
         if(gender==null)
         {
-            Toast.makeText(this, "Please Select gender ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please Select Gender ", Toast.LENGTH_SHORT).show()
              return
         }
 
@@ -254,12 +254,17 @@ class RegisterActivity : AppCompatActivity(){
             return
 
         }
-        if (editPhoneNo.text.trim().toString().isEmpty())
+        if (editPhoneNo.text.trim().toString().isEmpty()||editPhoneNo.length() < 9 || editPhoneNo.length() > 10)
         {
             editPhoneNo.error = "Please Enter 10 Digit Mobile No"
             editPhoneNo.requestFocus()
             return
         }
+//        if (editPhoneNo.length() < 9 || editPhoneNo.length() > 10)
+//        {
+//            editPhoneNo.error = "Please Enter 10 Digit Mobile No"
+//            editPhoneNo.requestFocus()
+//        }
         if (editEmail.text.trim().toString().isEmpty()) {
             editEmail.error = "Please Enter Email"
             editEmail.requestFocus()

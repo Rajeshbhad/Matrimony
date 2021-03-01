@@ -43,7 +43,27 @@ class Location : AppCompatActivity() {
         LocationSaveBtn.setOnClickListener {
             save()
         }
-        val editCountryLivingInArray= arrayOf( "--Select--","Son","Brother","Relative","Friend")
+        val editCountryLivingInArray= arrayOf("--Select--", "Any","India" ,"United States of America","United Arab Emirates","Saudi Arabia","Kuwait "
+            ,"United Kingdom","Malaysia","Singapore","Australia","Canada","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla"
+            ,"Antarctica","Antigua and Barbuda"," Argentina","Armenia", "Aruba","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus",
+            "Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British indian ocean Territory",
+            "British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Island","Central African Republic",
+            "Chad","Chile","China","Christmas Island","Cocos Island","Colombia","Comoros","Congo","Cook Island","Costa Rica","Croatia","cuba","Cyprus","Czech Republic"
+            ,"Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","EI Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia",
+            "Falkland Islands","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia",
+            "Germany","Ghana","gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Gautemala","Guinea","Guinea-Bissau","Guyana","Haiti",
+            "Heard and McDonald Islands","Honduras","Hong Kong","Hungary","Iceland","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Ivory Coast","Jamaica",
+            "Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea,North","Korea,South","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya",
+            "Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Maldives","Mali","Marshall Islands","Martinique","Mauritania",
+            " Mauritius","Mayotte"," Mexico","Micronesia,Federated States of","Moldova","Monaco","Mongolia","Montserrat"," Morocco","Mozambique","Myanmar",
+            "Namibia","Nauru"," Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue"," Norfolk Island",
+            "Northern Mariana Island","Norway","Oman"," Pakistan"," Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn Island","Poland",
+            "Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","S.Georgia and S.Sandwich ISIS","Saint Kitts &amp; Nevis","Saint Lucia",
+            "Saint Vincent and The Grenadines","Samoa","San Marino","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Slovenia","Somalia","South Africa",
+            "Spain","Sri Lanka","St.Helena","St. Pierre and Miquelon","Sudan","Suriname","Svalbard and Jan Mayen Islands","Swaziland","Sweden","Switzerland","Syria",
+            "Taiwan","Tajikistan","Tanzania ","Thailand","Togo ","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and caicos Islands",
+            "Tuvalu","Uganda"," Ukraine","Uruguay","uzbekistan","Vanuatu","Vatican City"," Venezuela","Vietnam","Virgin Islands","Wallis and Futuna Islands",
+            "Western Sahara","Yemen","Yugoslavia(Former)","Zaire","Zambia","Zimbabwe","DR Congo" )
         val arrayAdapter1= ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,editCountryLivingInArray)
         editCountryLivingIn.adapter=arrayAdapter1
         editCountryLivingIn.onItemSelectedListener=object : AdapterView.OnItemSelectedListener{

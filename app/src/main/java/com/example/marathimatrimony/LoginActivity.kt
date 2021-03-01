@@ -91,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
                            else
                            {
                                user.sendEmailVerification()
-                               Toast.makeText(this, "Please Check Your Email Verify Your Account!.",Toast.LENGTH_SHORT).show()
+                               Toast.makeText(this, "Verification mail sent Please verify .",Toast.LENGTH_SHORT).show()
                            }
                        }
                         else
