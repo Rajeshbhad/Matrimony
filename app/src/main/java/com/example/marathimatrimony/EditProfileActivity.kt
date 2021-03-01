@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -108,6 +110,11 @@ class EditProfileActivity : AppCompatActivity() {
     lateinit var add_horoscope: LinearLayout
     lateinit var add_photos: LinearLayout
 
+    lateinit var recyclerView:RecyclerView
+
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
+
 
 
 
@@ -180,6 +187,9 @@ class EditProfileActivity : AppCompatActivity() {
         BPSmokingHabits= findViewById(R.id.bPSmokingHabits)
 
         profilePhoto= findViewById(R.id.profilePhoto)
+
+        recyclerView= findViewById(R.id.recyclerView)
+
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -286,8 +296,21 @@ class EditProfileActivity : AppCompatActivity() {
             val intent = Intent(this, WhatIAmLookingFor::class.java)
             startActivity(intent)
         }
+
+        setupRecyclerView()
         getUserInfo()
+
     }
+
+    private fun setupRecyclerView() {
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation=LinearLayoutManager.HORIZONTAL
+        recyclerView.layoutManager = layoutManager
+
+        adapter = RecyclerAdapter()
+        recyclerView.adapter = adapter
+    }
+
     private fun getUserInfo() {
 
         docRef.addSnapshotListener { snapshot, e ->
