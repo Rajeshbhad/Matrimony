@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/teal_200"
     tools:context=".bottomnavigation.MatchesFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="@color/teal_200"
-        android:textSize="100dp"
-        android:text="Matches" />
-
-</FrameLayout>
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:layout_margin="5dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMatches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+</ScrollView>

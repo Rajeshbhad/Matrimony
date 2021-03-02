@@ -112,7 +112,6 @@ class EditProfileActivity : AppCompatActivity() {
 
     lateinit var recyclerView:RecyclerView
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
 
 
