@@ -2,7 +2,6 @@ package com.example.marathimatrimony
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
@@ -13,6 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
+import com.example.marathimatrimony.*
 import com.example.marathimatrimony.bottomnavigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -23,18 +23,17 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
 
-class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener
-{
+class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
 
 
-     lateinit var toolbar: Toolbar
-     lateinit var navigationView: NavigationView
-     lateinit var drawerLayout: DrawerLayout
-     lateinit var homeFragment: HomeFragment
-     lateinit var matchesFragment: MatchesFragment
-     lateinit var mailboxFragment: MailboxFragment
-     lateinit var notificationsFragment: NotificationFragment
-     lateinit var searchFragment: SearchesFragment
+    lateinit var toolbar: Toolbar
+    lateinit var navigationView: NavigationView
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var homeFragment: HomeFragment
+    lateinit var matchesFragment: MatchesFragment
+    lateinit var mailboxFragment: MailboxFragment
+    lateinit var notificationsFragment: NotificationFragment
+    lateinit var searchFragment: SearchesFragment
 
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
@@ -82,53 +81,53 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
                 R.id.navigation_home -> {
                     homeFragment = HomeFragment()
                     supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.nav_host_fragment, homeFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                            .commit()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, homeFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
 
                 }
                 R.id.navigation_matches -> {
                     matchesFragment = MatchesFragment()
                     supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.nav_host_fragment, matchesFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                            .commit()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, matchesFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
 
                 }
                 R.id.navigation_mailbox -> {
                     mailboxFragment = MailboxFragment()
                     supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.nav_host_fragment, mailboxFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                            .commit()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, mailboxFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
 
                 }
                 R.id.navigation_notification -> {
                     notificationsFragment = NotificationFragment()
                     supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.nav_host_fragment, notificationsFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                            .commit()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, notificationsFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
 
                 }
                 R.id.navigation_searches -> {
                     searchFragment = SearchesFragment()
                     supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.nav_host_fragment, searchFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                            .commit()
+                        .beginTransaction()
+                        .replace(R.id.nav_host_fragment, searchFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
 
                 }
             }
             true
         }
         val toggle = ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, 0, 0
+            this, drawerLayout, toolbar, 0, 0
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -140,10 +139,10 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
                 return@addSnapshotListener
             } else {
                 if (snapshot != null && snapshot.exists()) {
-                     userName.text = snapshot.getString("name")
-                     emailAddress.text=snapshot.getString("email")
-                     val image: String? =snapshot.getString("imageUrl")
-                     Picasso.get().load(image).into(profilePhoto)
+                    userName.text = snapshot.getString("name")
+                    emailAddress.text=snapshot.getString("email")
+                    val image: String? =snapshot.getString("imageUrl")
+                    Picasso.get().load(image).into(profilePhoto)
                 } else {
                 }
             }
@@ -151,10 +150,10 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.navigation, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.navigation, menu)
+//        return true
+//    }
 
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

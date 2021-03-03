@@ -4,12 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_vertical"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/teal_200"
     tools:context=".bottomnavigation.MatchesFragment">
-      <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/teal_200">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/teal_200"
@@ -21,4 +24,74 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3,118 Matches based on your preferences"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="15dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3,043 yet to view"
+                    android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape9"
+                    android:textColor="@color/white"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75 Viewed"
+                    android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape9"
+                    android:textColor="@color/white"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="379dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matches Yet To View"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:padding="5dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_matches_yet_to_view"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="120dp"
+                    android:padding="20dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>
